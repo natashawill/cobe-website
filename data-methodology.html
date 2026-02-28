@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary SEO Data -->
+    <title>Data & Methodology | The Cost of Black Excellence Research Institute</title>
+    <meta name="description" content="Explore the data and methodology behind the extraction. Interactive charts detailing the systemic mechanics of the Excellence Tax™ based on our survey of 98 UK Black professionals.">
+    <meta name="keywords" content="Cost of Black Excellence research, workplace extraction data, BAME professional statistics, competency tax, identity suppression in corporate, diversity metrics">
+    <meta name="author" content="The Cost of Black Excellence Research Institute">
+
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://www.costofblackexcellence.com/data-methodology.html">
+
+    <!-- Preload Critical Assets -->
+    <link rel="preload" href="assets/css/styles.css" as="style">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/images/favicon.svg">
+
+    <!-- Open Graph Data -->
+    <meta property="og:site_name" content="The Cost of Black Excellence Research Institute">
+    <meta property="og:title" content="Data & Methodology | The Cost of Black Excellence">
+    <meta property="og:description" content="Explore the data behind the extraction. Interactive charts detailing the systemic mechanics of the Excellence Tax™ based on our proprietary research of UK Black professionals.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.costofblackexcellence.com/data-methodology.html">
+    <meta property="og:image" content="https://www.costofblackexcellence.com/images/home-bg.jpg">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        cobe: {
+                            black: '#121212',
+                            dark: '#1f1f1f',
+                            accent: '#C5A880',
+                            light: '#f9f9f9',
+                            muted: '#666666'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="antialiased font-sans flex flex-col min-h-screen bg-white">
+
+    <!-- Navigation (New Institutional Mega Menu) -->
+    <nav id="navbar" class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <!-- Typography Logo (Concept 3) -->
+                    <a href="index.html" class="flex-shrink-0 inline-flex flex-col justify-center group">
+                        <div class="font-serif font-bold text-xl md:text-2xl tracking-tight text-cobe-black leading-none group-hover:text-cobe-accent transition-colors">
+                            The Cost of Black Excellence<span class="text-cobe-accent group-hover:text-cobe-black transition-colors">.</span>
+                        </div>
+                        <div class="font-sans font-medium text-[0.55rem] md:text-[0.65rem] tracking-[0.3em] text-gray-500 mt-1 pl-0.5">
+                            RESEARCH INSTITUTE
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Desktop Mega Menu -->
+                <div class="hidden lg:flex lg:items-center lg:space-x-8 h-full">
+                    
+                    <!-- 1. Research & Data (Active) -->
+                    <div class="relative group h-full flex items-center">
+                        <button class="flex items-center gap-1 text-sm font-medium text-cobe-black border-b-2 border-cobe-accent pb-1 h-full pt-1 focus:outline-none">
+                            Research & Data <i data-lucide="chevron-down" class="h-4 w-4 text-cobe-accent transition-colors"></i>
+                        </button>
+                        <div class="absolute left-0 top-20 w-72 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-3 space-y-1">
+                                <a href="research.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
+                                    <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="file-text" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
+                                    <div>
+                                        <p class="text-sm font-bold text-cobe-black">Core Findings</p>
+                                        <p class="text-xs text-gray-500 mt-0.5">Read the executive summary</p>
+                                    </div>
+                                </a>
+                                <a href="data-methodology.html" class="flex items-start gap-3 p-3 rounded-xl bg-gray-50 transition-colors group/item">
+                                    <div class="bg-cobe-accent/10 p-2 rounded-lg"><i data-lucide="bar-chart-2" class="h-5 w-5 text-cobe-accent"></i></div>
+                                    <div>
+                                        <p class="text-sm font-bold text-cobe-black">Data & Methodology</p>
+                                        <p class="text-xs text-cobe-accent mt-0.5">Explore the dashboard</p>
+                                    </div>
+                                </a>
+                                <a href="publications.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
+                                    <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="book-open" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
+                                    <div>
+                                        <p class="text-sm font-bold text-cobe-black">Publications</p>
+                                        <p class="text-xs text-gray-500 mt-0.5">Whitepapers & articles</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. The Audit Platform -->
+                    <div class="relative group h-full flex items-center">
+                        <button class="flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-cobe-black transition-colors focus:outline-none">
+                            The Audit Platform <i data-lucide="chevron-down" class="h-4 w-4 text-gray-400 group-hover:text-cobe-accent transition-colors"></i>
+                        </button>
+                        <div class="absolute left-0 top-20 w-72 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-3 space-y-1">
+                                <a href="audits.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
+                                    <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="search" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
+                                    <div>
+                                        <p class="text-sm font-bold text-cobe-black">Organisational Diagnostics</p>
+                                        <p class="text-xs text-gray-500 mt-0.5">Corporate audit services</p>
+                                    </div>
+                                </a>
+                                <a href="quiz.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
+                                    <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="clipboard-check" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
+                                    <div>
+                                        <p class="text-sm font-bold text-cobe-black">The Excellence Tax Assessment</p>
+                                        <p class="text-xs text-gray-500 mt-0.5">Calculate your extraction zone</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Institute -->
+                    <div class="relative group h-full flex items-center">
+                        <button class="flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-cobe-black transition-colors focus:outline-none">
+                            Institute <i data-lucide="chevron-down" class="h-4 w-4 text-gray-400 group-hover:text-cobe-accent transition-colors"></i>
+                        </button>
+                        <div class="absolute left-0 top-20 w-72 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-3 space-y-1">
+                                <a href="about.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
+                                    <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="landmark" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
+                                    <div>
+                                        <p class="text-sm font-bold text-cobe-black">About the Institute</p>
+                                        <p class="text-xs text-gray-500 mt-0.5">Our mission & founder</p>
+                                    </div>
+                                </a>
+                                <a href="ethics.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
+                                    <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="scale" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
+                                    <div>
+                                        <p class="text-sm font-bold text-cobe-black">Governance & Ethics</p>
+                                        <p class="text-xs text-gray-500 mt-0.5">Data security & protocols</p>
+                                    </div>
+                                </a>
+                                <a href="partner.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
+                                    <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="handshake" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
+                                    <div>
+                                        <p class="text-sm font-bold text-cobe-black">Partner With Us</p>
+                                        <p class="text-xs text-gray-500 mt-0.5">Corporate & academic alliances</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. Media & Insights -->
+                    <div class="relative group h-full flex items-center">
+                        <button class="flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-cobe-black transition-colors focus:outline-none">
+                            Media & Insights <i data-lucide="chevron-down" class="h-4 w-4 text-gray-400 group-hover:text-cobe-accent transition-colors"></i>
+                        </button>
+                        <div class="absolute left-0 top-20 w-72 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-3 space-y-1">
+                                <a href="media.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
+                                    <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="newspaper" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
+                                    <div>
+                                        <p class="text-sm font-bold text-cobe-black">Press & Media</p>
+                                        <p class="text-xs text-gray-500 mt-0.5">Assets & recent features</p>
+                                    </div>
+                                </a>
+                                <a href="speaking.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
+                                    <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="mic" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
+                                    <div>
+                                        <p class="text-sm font-bold text-cobe-black">Corporate Speaking</p>
+                                        <p class="text-xs text-gray-500 mt-0.5">Keynotes & workshops</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTAs -->
+                    <div class="flex items-center pl-6 border-l border-gray-200 space-x-4">
+                        <a href="contact.html" class="inline-flex items-center justify-center px-6 py-2.5 rounded-full text-sm font-medium text-white bg-cobe-black hover:bg-cobe-dark transition-all shadow-sm hover:shadow-md">Contact Us</a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="flex items-center lg:hidden">
+                    <button type="button" id="mobile-menu-btn" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none">
+                        <span class="sr-only">Open main menu</span>
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div class="lg:hidden hidden bg-white border-t border-gray-100 max-h-[80vh] overflow-y-auto" id="mobile-menu">
+            <div class="px-4 py-6 space-y-6">
+                <!-- Research & Data -->
+                <div>
+                    <p class="px-3 text-xs font-bold text-cobe-accent uppercase tracking-wider mb-2">Research & Data</p>
+                    <div class="space-y-1">
+                        <a href="research.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Core Findings</a>
+                        <a href="data-methodology.html" class="block px-3 py-2 rounded-md text-base font-bold text-cobe-black bg-gray-50">Data & Methodology</a>
+                        <a href="publications.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Publications</a>
+                    </div>
+                </div>
+
+                <!-- Audit Platform -->
+                <div>
+                    <p class="px-3 text-xs font-bold text-cobe-accent uppercase tracking-wider mb-2">The Audit Platform</p>
+                    <div class="space-y-1">
+                        <a href="audits.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Organisational Diagnostics</a>
+                        <a href="quiz.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">The Assessment</a>
+                    </div>
+                </div>
+
+                <!-- Institute -->
+                <div>
+                    <p class="px-3 text-xs font-bold text-cobe-accent uppercase tracking-wider mb-2">Institute</p>
+                    <div class="space-y-1">
+                        <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">About the Institute</a>
+                        <a href="ethics.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Governance & Ethics</a>
+                        <a href="partner.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Partner With Us</a>
+                    </div>
+                </div>
+
+                <!-- Media -->
+                <div>
+                    <p class="px-3 text-xs font-bold text-cobe-accent uppercase tracking-wider mb-2">Media & Insights</p>
+                    <div class="space-y-1">
+                        <a href="media.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Press & Media</a>
+                        <a href="speaking.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Corporate Speaking</a>
+                    </div>
+                </div>
+
+                <!-- Mobile CTAs -->
+                <div class="pt-4 border-t border-gray-100 flex flex-col gap-3">
+                    <a href="contact.html" class="block w-full text-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-cobe-black hover:bg-cobe-dark">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="pt-32 pb-16 bg-cobe-black text-white hero-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-cobe-accent font-semibold tracking-wider uppercase text-sm mb-4 block fade-in-up">Interactive Dashboard</span>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-6 fade-in-up delay-100">The Data Behind the Extraction</h1>
+            <p class="text-lg text-gray-300 font-light max-w-3xl mx-auto fade-in-up delay-200">
+                Drawn directly from our survey of 1000+ UK Black Professionals. Interact with the charts below to understand the undeniable systemic mechanics of the Excellence Tax™.
+            </p>
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section class="py-16 bg-cobe-light flex-grow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Row 1: 3 Column Charts -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+                <!-- Chart 1: The Competency Tax -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 flex flex-col">
+                    <h3 class="text-xl font-bold font-serif text-cobe-black mb-2">The Competency Tax</h3>
+                    <p class="text-sm text-gray-500 mb-6 flex-grow">"How often do you feel you must work harder than others to be seen as competent?"</p>
+                    <div class="relative h-64 w-full">
+                        <canvas id="competencyChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Chart 2: Identity Suppression -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 flex flex-col">
+                    <h3 class="text-xl font-bold font-serif text-cobe-black mb-2">Identity Suppression</h3>
+                    <p class="text-sm text-gray-500 mb-6 flex-grow">Percentage feeling the need to tone down voice, hair, or emotions to succeed.</p>
+                    <div class="relative h-64 w-full">
+                        <canvas id="identityChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Chart 4: Health Impacts -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 flex flex-col">
+                    <h3 class="text-xl font-bold font-serif text-cobe-black mb-2">Health Impacts</h3>
+                    <p class="text-sm text-gray-500 mb-6 flex-grow">"To what extent do you believe your physical or emotional health has been impacted?"</p>
+                    <div class="relative h-64 w-full">
+                        <canvas id="healthChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 2: Insight + Wide Chart -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+                <!-- Data Insight Snippet -->
+                <div class="bg-cobe-black text-white p-8 rounded-3xl shadow-xl flex flex-col justify-center lg:col-span-1 relative overflow-hidden">
+                    <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-cobe-accent/20 rounded-full blur-2xl"></div>
+                    <i data-lucide="alert-triangle" class="h-10 w-10 text-cobe-accent mb-6 relative z-10"></i>
+                    <h3 class="text-2xl font-serif font-bold mb-4 relative z-10">The Flight Risk</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-6 relative z-10">
+                        The Institute's research indicates that the physiological toll of hypervigilance leads directly to severe burnout. A significant percentage of senior staff are actively planning workplace exits purely for health preservation.
+                    </p>
+                    <p class="text-cobe-accent font-bold text-3xl relative z-10">68% <span class="text-sm text-gray-300 font-normal">considered leaving in the last 12 months</span></p>
+                </div>
+
+                <!-- Chart 3: Coping Strategies -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 lg:col-span-2 flex flex-col">
+                    <h3 class="text-xl font-bold font-serif text-cobe-black mb-2">Coping Mechanisms</h3>
+                    <p class="text-sm text-gray-500 mb-6">How professionals manage the stress of workplace extraction.</p>
+                    <div class="relative h-64 w-full flex-grow">
+                        <canvas id="copingChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 3: Psychological Safety -->
+            <div class="grid grid-cols-1 lg:w-2/3 mx-auto gap-8 mb-16">
+                 <!-- Chart 5: Psychological Safety -->
+                 <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
+                    <h3 class="text-xl font-bold font-serif text-cobe-black mb-2 text-center">Psychological Safety at Work</h3>
+                    <p class="text-sm text-gray-500 mb-6 text-center">"How safe do you feel expressing your opinions or advocating for yourself?"</p>
+                    <div class="relative h-64 w-full">
+                        <canvas id="safetyChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Qualitative Data Carousel -->
+            <div class="max-w-4xl mx-auto mt-24 relative px-4 sm:px-12">
+                <h3 class="text-center text-sm font-semibold tracking-wider text-gray-400 uppercase mb-8">From the Research Transcripts</h3>
+                
+                <div class="relative overflow-hidden rounded-3xl shadow-lg border-l-8 border-cobe-accent bg-white">
+                    <i data-lucide="quote" class="absolute top-6 left-6 md:top-10 md:left-10 h-10 w-10 md:h-12 md:w-12 text-gray-100 z-0"></i>
+                    
+                    <!-- Carousel Track -->
+                    <div id="quote-carousel" class="flex transition-transform duration-500 ease-in-out relative z-10">
+                        
+                        <!-- Slide 1 -->
+                        <div class="w-full flex-shrink-0 p-8 md:p-14">
+                            <p class="text-lg md:text-xl font-serif text-gray-700 italic leading-relaxed mb-8">
+                                "As a senior leader, I realise that I have to be far 'noisier' than my preference, as this is not a known, seemingly acceptable, preferred style for a black female. I know that I will work longer hours than my peers... I have to smile through errors of judgement, or displays of bad behaviour."
+                            </p>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-cobe-black rounded-full flex items-center justify-center text-white font-bold font-serif text-sm">SL</div>
+                                <div>
+                                    <p class="font-bold text-cobe-black text-sm">Senior Leader</p>
+                                    <p class="text-gray-500 text-xs">South West England</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="w-full flex-shrink-0 p-8 md:p-14">
+                            <p class="text-lg md:text-xl font-serif text-gray-700 italic leading-relaxed mb-8">
+                                "...the majority of black professionals who have been in employment pre-George Floyd have experienced a change in their work environment... We are slowly becoming familiar with the 'new world' but we do not yet trust it! The ground can shift quite swiftly from beneath us."
+                            </p>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-cobe-black rounded-full flex items-center justify-center text-white font-bold font-serif text-sm">ML</div>
+                                <div>
+                                    <p class="font-bold text-cobe-black text-sm">Mid-Level Professional</p>
+                                    <p class="text-gray-500 text-xs">Healthcare Sector</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="w-full flex-shrink-0 p-8 md:p-14">
+                            <p class="text-lg md:text-xl font-serif text-gray-700 italic leading-relaxed mb-8">
+                                "The exhaustion isn't from the work itself. I am excellent at my job. The exhaustion comes from the constant calculation of how my excellence will be received, perceived, and penalised. It is a full-time job on top of my actual job."
+                            </p>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-cobe-black rounded-full flex items-center justify-center text-white font-bold font-serif text-sm">ED</div>
+                                <div>
+                                    <p class="font-bold text-cobe-black text-sm">Executive Director</p>
+                                    <p class="text-gray-500 text-xs">Financial Services</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <button onclick="window.prevSlide()" class="absolute left-0 top-1/2 -translate-y-1/2 -ml-2 md:-ml-6 w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center text-gray-400 hover:text-cobe-accent transition-colors focus:outline-none z-20">
+                    <i data-lucide="chevron-left" class="h-6 w-6"></i>
+                </button>
+                <button onclick="window.nextSlide()" class="absolute right-0 top-1/2 -translate-y-1/2 -mr-2 md:-mr-6 w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center text-gray-400 hover:text-cobe-accent transition-colors focus:outline-none z-20">
+                    <i data-lucide="chevron-right" class="h-6 w-6"></i>
+                </button>
+
+                <!-- Carousel Dots -->
+                <div class="flex justify-center gap-2 mt-6">
+                    <button onclick="window.goToSlide(0)" class="carousel-dot w-3 h-3 rounded-full bg-cobe-accent transition-colors focus:outline-none"></button>
+                    <button onclick="window.goToSlide(1)" class="carousel-dot w-3 h-3 rounded-full bg-gray-300 transition-colors focus:outline-none"></button>
+                    <button onclick="window.goToSlide(2)" class="carousel-dot w-3 h-3 rounded-full bg-gray-300 transition-colors focus:outline-none"></button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Methodology Section -->
+    <section class="py-24 bg-white border-t border-gray-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-12">
+                <span class="text-cobe-accent font-semibold tracking-wider uppercase text-sm mb-4 block">Academic Rigour</span>
+                <h2 class="text-3xl font-serif font-bold text-cobe-black mb-6">Research Methodology</h2>
+                <div class="w-16 h-1 bg-cobe-accent mb-8"></div>
+            </div>
+
+            <div class="space-y-8 text-gray-700 leading-relaxed">
+                <p>
+                    The Cost of Black Excellence™ Research Institute operates on the principle that the lived experiences of Black and BAME professionals must be treated as undeniable, empirical data. Our methodology is designed to translate systemic, often invisible, workplace trauma into measurable organisational metrics.
+                </p>
+                
+                <h3 class="text-xl font-bold text-cobe-black font-serif mt-8">Data Collection & Scope</h3>
+                <p>
+                    The data visualised on this dashboard is drawn from a targeted, proprietary survey of <strong>1000+ Black and BAME professionals</strong> operating within the United Kingdom, USA, Canada and Australia.. This highly focused dataset ensures a deep, qualitative understanding of the Excellence Tax™ across various career trajectories, rather than relying on broad, diluted demographic averages. 
+                </p>
+
+                <h3 class="text-xl font-bold text-cobe-black font-serif mt-8">Participant Demographics</h3>
+                <ul class="list-disc pl-5 space-y-2 mt-4">
+                    <li><strong>Career Levels:</strong> Participants range from entry-level professionals to C-Suite Executives and Managing Directors.</li>
+                    <li><strong>Sectors Represented:</strong> Data spans across Property, Healthcare, Education, Financial Services, Tech, and the Public Sector.</li>
+                    <li><strong>Geographic Distribution:</strong> Responses encompass professionals working in major UK economic hubs including London, the South West, and the Midlands.</li>
+                </ul>
+
+                <h3 class="text-xl font-bold text-cobe-black font-serif mt-8">Mixed-Methods Approach</h3>
+                <p>
+                    Our research employs a mixed-methods framework. <strong>Quantitative data</strong> measures the frequency and severity of identity suppression, health impacts, and the 'Competency Tax'. <strong>Qualitative data</strong> (gathered via free-text survey responses and subsequent in-depth interviews) maps the precise mechanics of how this extraction occurs on a daily basis. 
+                </p>
+                <p>
+                    All data is anonymised and aggregated prior to analysis to protect the identities of participants discussing sensitive workplace experiences. For more information on how we handle and protect research data, please view our <a href="ethics.html" class="text-cobe-accent hover:underline font-medium">Governance & Ethics</a> policy.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Snippet Included Here (Updated with New Links) -->
+    <footer class="bg-cobe-dark text-white pt-16 pb-8 border-t border-white/10 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12 border-b border-white/10 pb-12">
+                
+                <div class="lg:col-span-1">
+                    <!-- NEW TYPOGRAPHY LOGO -->
+                    <a href="index.html" class="inline-flex flex-col mb-4 group">
+                        <div class="font-serif font-bold text-2xl tracking-tight text-white leading-none group-hover:text-cobe-accent transition-colors">
+                            The Cost of Black Excellence<span class="text-cobe-accent group-hover:text-white transition-colors">.</span>
+                        </div>
+                        <div class="font-sans font-medium text-[0.65rem] tracking-[0.3em] text-gray-400 mt-1.5 pl-0.5 opacity-80">
+                            RESEARCH INSTITUTE
+                        </div>
+                    </a>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                        Documenting workplace extraction. Building liberation infrastructure for Black and BAME professionals.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/in/nw-cobe/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-cobe-accent hover:text-cobe-black transition-all" aria-label="LinkedIn">
+                            <i data-lucide="linkedin" class="h-5 w-5"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@NatashaWilliamsUK" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-cobe-accent hover:text-cobe-black transition-all" aria-label="YouTube">
+                            <i data-lucide="youtube" class="h-5 w-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-white tracking-wider uppercase text-sm mb-4">Research & Data</h3>
+                    <ul class="space-y-3 mb-8">
+                        <li><a href="research.html" class="text-gray-400 hover:text-cobe-accent text-sm transition-colors">Core Findings</a></li>
+                        <li><a href="data-methodology.html" class="text-gray-400 hover:text-cobe-accent text-sm transition-colors">Data & Methodology</a></li>
+                        <li><a href="publications.html" class="text-gray-400 hover:text-cobe-accent text-sm transition-colors">Publications</a></li>
+                    </ul>
+                    <h3 class="font-bold text-white tracking-wider uppercase text-sm mb-4">The Audit Platform</h3>
+                    <ul class="space-y-3">
+                        <li><a href="audits.html" class="text-gray-400 hover:text-cobe-accent text-sm transition-colors">Organisational Diagnostics</a></li>
+                        <li><a href="quiz.html" class="text-gray-400 hover:text-cobe-accent text-sm transition-colors">The Assessment</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-white tracking-wider uppercase text-sm mb-4">Institute</h3>
+                    <ul class="space-y-3 mb-8">
+                        <li><a href="about.html" class="text-gray-400 hover:text-cobe-accent text-sm transition-colors">About the Institute</a></li>
+                        <li><a href="ethics.html" class="text-gray-400 hover:text-cobe-accent text-sm transition-colors">Governance & Ethics</a></li>
+                        <li><a href="partner.html" class="text-gray-400 hover:text-cobe-accent text-sm transition-colors">Partner With Us</a></li>
+                    </ul>
+                    <h3 class="font-bold text-white tracking-wider uppercase text-sm mb-4">Media & Insights</h3>
+                    <ul class="space-y-3">
+                        <li><a href="media.html" class="text-gray-400 hover:text-cobe-accent text-sm transition-colors">Press & Media</a></li>
+                        <li><a href="speaking.html" class="text-gray-400 hover:text-cobe-accent text-sm transition-colors">Corporate Speaking</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-white tracking-wider uppercase text-sm mb-4">Stay Updated</h3>
+                    <p class="text-gray-400 text-sm mb-4 leading-relaxed">Join HR leaders and professionals receiving insights on dismantling the Excellence Tax™.</p>
+                    <form action="#" class="flex flex-col gap-2">
+                        <input type="email" placeholder="Professional Email" class="bg-white/5 border border-white/10 text-white rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-cobe-accent transition-colors w-full">
+                        <button type="button" class="bg-cobe-accent text-cobe-black font-bold rounded-lg px-4 py-2.5 text-sm hover:bg-white transition-colors w-full">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                <p>&copy; 2026 The Cost of Black Excellence Research Institute. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="terms.html" class="hover:text-white transition-colors">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Logic wrapped in DOMContentLoaded to guarantee charts load -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Icons
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+
+            // Navbar Scroll Logic
+            window.addEventListener('scroll', () => {
+                const nav = document.getElementById('navbar');
+                if (nav) {
+                    if (window.scrollY > 10) {
+                        nav.classList.add('shadow-sm');
+                        nav.classList.replace('bg-white/90', 'bg-white/95');
+                    } else {
+                        nav.classList.remove('shadow-sm');
+                        nav.classList.replace('bg-white/95', 'bg-white/90');
+                    }
+                }
+            });
+
+            // Mobile menu toggle
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            if (btn && menu) {
+                btn.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                });
+            }
+
+            // --- Charts Initialization ---
+            if (typeof Chart !== 'undefined' && document.getElementById('competencyChart')) {
+                Chart.defaults.font.family = "'Inter', sans-serif";
+                Chart.defaults.color = '#666';
+                const cobeBlack = '#121212';
+                const cobeAccent = '#C5A880';
+                const lightGray = '#e5e7eb';
+
+                // Chart 1: Competency Tax
+                const competencyCanvas = document.getElementById('competencyChart');
+                if (competencyCanvas) {
+                    new Chart(competencyCanvas.getContext('2d'), {
+                        type: 'doughnut',
+                        data: {
+                            labels: ['Always', 'Often', 'Sometimes', 'Rarely'],
+                            datasets: [{
+                                data: [52, 28, 15, 5],
+                                backgroundColor: [cobeBlack, cobeAccent, '#d1bfae', lightGray],
+                                borderWidth: 0,
+                                hoverOffset: 4
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                legend: { position: 'bottom', labels: { boxWidth: 12, padding: 15 } },
+                                tooltip: { callbacks: { label: function(context) { return ' ' + context.parsed + '%'; } } }
+                            },
+                            cutout: '65%'
+                        }
+                    });
+                }
+
+                // Chart 2: Identity Suppression
+                const identityCanvas = document.getElementById('identityChart');
+                if (identityCanvas) {
+                    new Chart(identityCanvas.getContext('2d'), {
+                        type: 'bar',
+                        data: {
+                            labels: ['Entry', 'Mid-Level', 'Exec/Dir'],
+                            datasets: [{
+                                label: 'Suppression Rate (%)',
+                                data: [85.7, 85.7, 88.0],
+                                backgroundColor: cobeAccent,
+                                borderRadius: 6
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            scales: {
+                                y: { beginAtZero: true, max: 100, grid: { color: '#f3f4f6' } },
+                                x: { grid: { display: false } }
+                            },
+                            plugins: { legend: { display: false } }
+                        }
+                    });
+                }
+
+                // Chart 3: Coping Mechanisms
+                const copingCanvas = document.getElementById('copingChart');
+                if (copingCanvas) {
+                    new Chart(copingCanvas.getContext('2d'), {
+                        type: 'bar',
+                        data: {
+                            labels: ['Emotional Suppression', 'Family/Friends', 'Exercise', 'Therapy', 'Journaling'],
+                            datasets: [{
+                                label: 'Usage (%)',
+                                data: [78, 81, 62, 45, 30],
+                                backgroundColor: [cobeBlack, cobeAccent, cobeAccent, cobeAccent, cobeAccent],
+                                borderRadius: 4
+                            }]
+                        },
+                        options: {
+                            indexAxis: 'y',
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            scales: {
+                                x: { beginAtZero: true, max: 100, grid: { color: '#f3f4f6' } },
+                                y: { grid: { display: false } }
+                            },
+                            plugins: {
+                                legend: { display: false },
+                                tooltip: {
+                                    callbacks: {
+                                        label: function(context) {
+                                            if(context.label === 'Emotional Suppression') {
+                                                return ' 78% (Highest risk factor)';
+                                            }
+                                            return ' ' + context.parsed.x + '%';
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    });
+                }
+
+                // Chart 4: Health Impacts
+                const healthCanvas = document.getElementById('healthChart');
+                if (healthCanvas) {
+                    new Chart(healthCanvas.getContext('2d'), {
+                        type: 'pie',
+                        data: {
+                            labels: ['Significantly', 'Moderately', 'Slightly', 'Not at all'],
+                            datasets: [{
+                                data: [45, 32, 15, 8],
+                                backgroundColor: [cobeBlack, cobeAccent, '#d1bfae', lightGray],
+                                borderWidth: 0,
+                                hoverOffset: 4
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                legend: { position: 'bottom', labels: { boxWidth: 12, padding: 15 } },
+                                tooltip: { callbacks: { label: function(context) { return ' ' + context.parsed + '%'; } } }
+                            }
+                        }
+                    });
+                }
+
+                // Chart 5: Psychological Safety
+                const safetyCanvas = document.getElementById('safetyChart');
+                if (safetyCanvas) {
+                    new Chart(safetyCanvas.getContext('2d'), {
+                        type: 'bar',
+                        data: {
+                            labels: ['Very Safe', 'Somewhat Safe', 'Neutral', 'Somewhat Unsafe', 'Very Unsafe'],
+                            datasets: [{
+                                label: 'Safety Level (%)',
+                                data: [12, 24, 18, 28, 18],
+                                backgroundColor: [lightGray, '#d1bfae', cobeAccent, cobeBlack, cobeBlack],
+                                borderRadius: 6
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            scales: {
+                                y: { beginAtZero: true, max: 40, grid: { color: '#f3f4f6' } },
+                                x: { grid: { display: false } }
+                            },
+                            plugins: { legend: { display: false } }
+                        }
+                    });
+                }
+            }
+
+            // --- Carousel Logic ---
+            const carousel = document.getElementById('quote-carousel');
+            if (carousel) {
+                const dots = document.querySelectorAll('.carousel-dot');
+                const totalSlides = 3;
+                let currentIndex = 0;
+                let autoSlideInterval;
+
+                window.updateCarousel = () => {
+                    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+                    dots.forEach((dot, index) => {
+                        dot.classList.toggle('bg-cobe-accent', index === currentIndex);
+                        dot.classList.toggle('bg-gray-300', index !== currentIndex);
+                    });
+                };
+
+                window.nextSlide = () => {
+                    currentIndex = (currentIndex + 1) % totalSlides;
+                    window.updateCarousel();
+                    window.resetInterval();
+                };
+
+                window.prevSlide = () => {
+                    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                    window.updateCarousel();
+                    window.resetInterval();
+                };
+
+                window.goToSlide = (index) => {
+                    currentIndex = index;
+                    window.updateCarousel();
+                    window.resetInterval();
+                };
+
+                window.resetInterval = () => {
+                    clearInterval(autoSlideInterval);
+                    autoSlideInterval = setInterval(window.nextSlide, 8000); 
+                };
+
+                // Start autoplay
+                autoSlideInterval = setInterval(window.nextSlide, 8000);
+            }
+        });
+    </script>
+</body>
+</html>

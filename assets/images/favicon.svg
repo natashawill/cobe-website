@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <!-- Deep Institute Black Background with slightly rounded premium corners -->
+    <rect width="512" height="512" rx="110" fill="#121212"/>
+    
+    <!-- Elegant Gold Serif 'C' -->
+    <text x="46%" y="54%" font-family="'Playfair Display', Georgia, serif" font-size="360" font-weight="bold" fill="#C5A880" text-anchor="middle" dominant-baseline="central">C</text>
+    
+    <!-- The Signature Gold Accent Dot -->
+    <circle cx="370" cy="360" r="35" fill="#C5A880"/>
+</svg>
