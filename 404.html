@@ -61,165 +61,199 @@
 </head>
 <body class="antialiased font-sans flex flex-col min-h-screen bg-cobe-black">
 
-    <!-- Navigation (Institutional Mega Menu) -->
+    <!-- Navigation -->
     <nav id="navbar" class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20">
                 <div class="flex items-center">
-                    <a href="index.html" class="flex-shrink-0 inline-flex flex-col justify-center group">
-                        <div class="font-serif font-bold text-xl md:text-2xl tracking-tight text-cobe-black leading-none group-hover:text-cobe-accent transition-colors">
-                            The Cost of Black Excellence<span class="text-cobe-accent group-hover:text-cobe-black transition-colors">.</span>
-                        </div>
-                        <div class="font-sans font-medium text-[0.55rem] md:text-[0.65rem] tracking-[0.3em] text-gray-500 mt-1 pl-0.5">
-                            RESEARCH INSTITUTE
-                        </div>
+                    <!-- The Logo acts as the Home link -->
+                    <a href="index.html" class="flex-shrink-0 inline-flex items-center gap-3 group">
+                        <img src="assets/images/C.png" alt="COBE Logo" class="h-8 md:h-10 w-auto object-contain transition-transform group-hover:scale-105">
+                        <span class="font-serif font-bold text-xl tracking-tight text-cobe-black group-hover:text-cobe-accent transition-colors">The Cost of Black Excellence<span class="text-cobe-accent group-hover:text-cobe-black transition-colors">.</span></span>
                     </a>
                 </div>
                 
                 <!-- Desktop Mega Menu -->
                 <div class="hidden lg:flex lg:items-center lg:space-x-8 h-full">
-                    <!-- 1. Research & Data -->
+                    
+                    <!-- 1. The Research Dropdown -->
                     <div class="relative group h-full flex items-center">
                         <button class="flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-cobe-black transition-colors focus:outline-none">
-                            Research & Data <i data-lucide="chevron-down" class="h-4 w-4 text-gray-400 group-hover:text-cobe-accent transition-colors"></i>
+                            The Research <i data-lucide="chevron-down" class="h-4 w-4 text-gray-400 group-hover:text-cobe-accent transition-colors"></i>
                         </button>
+                        <!-- Dropdown Panel -->
                         <div class="absolute left-0 top-20 w-72 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                             <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-3 space-y-1">
                                 <a href="research.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
                                     <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="file-text" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
-                                    <div><p class="text-sm font-bold text-cobe-black">Core Findings</p><p class="text-xs text-gray-500 mt-0.5">Read the executive summary</p></div>
+                                    <div>
+                                        <p class="text-sm font-bold text-cobe-black">Executive Summary</p>
+                                        <p class="text-xs text-gray-500 mt-0.5">Read the core findings</p>
+                                    </div>
                                 </a>
-                                <a href="data-methodology.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
+                                <a href="interactive-data.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
                                     <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="bar-chart-2" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
-                                    <div><p class="text-sm font-bold text-cobe-black">Data & Methodology</p><p class="text-xs text-gray-500 mt-0.5">Explore the dashboard</p></div>
-                                </a>
-                                <a href="publications.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
-                                    <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="book-open" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
-                                    <div><p class="text-sm font-bold text-cobe-black">Publications</p><p class="text-xs text-gray-500 mt-0.5">Whitepapers & articles</p></div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 2. The Audit Platform -->
-                    <div class="relative group h-full flex items-center">
-                        <button class="flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-cobe-black transition-colors focus:outline-none">
-                            The Audit Platform <i data-lucide="chevron-down" class="h-4 w-4 text-gray-400 group-hover:text-cobe-accent transition-colors"></i>
-                        </button>
-                        <div class="absolute left-0 top-20 w-72 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                            <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-3 space-y-1">
-                                <a href="audits.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
-                                    <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="search" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
-                                    <div><p class="text-sm font-bold text-cobe-black">Organisational Diagnostics</p><p class="text-xs text-gray-500 mt-0.5">Corporate audit services</p></div>
+                                    <div>
+                                        <p class="text-sm font-bold text-cobe-black">Data Dashboard</p>
+                                        <p class="text-xs text-gray-500 mt-0.5">Explore the metrics</p>
+                                    </div>
                                 </a>
                                 <a href="quiz.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
                                     <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="clipboard-check" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
-                                    <div><p class="text-sm font-bold text-cobe-black">The Excellence Tax Assessment</p><p class="text-xs text-gray-500 mt-0.5">Calculate your extraction zone</p></div>
+                                    <div>
+                                        <p class="text-sm font-bold text-cobe-black">The Assessment</p>
+                                        <p class="text-xs text-gray-500 mt-0.5">Calculate your Excellence Tax</p>
+                                    </div>
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- 3. Institute -->
+                    <!-- 2. Work With Me Dropdown -->
                     <div class="relative group h-full flex items-center">
                         <button class="flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-cobe-black transition-colors focus:outline-none">
-                            Institute <i data-lucide="chevron-down" class="h-4 w-4 text-gray-400 group-hover:text-cobe-accent transition-colors"></i>
+                            Work With Me <i data-lucide="chevron-down" class="h-4 w-4 text-gray-400 group-hover:text-cobe-accent transition-colors"></i>
                         </button>
                         <div class="absolute left-0 top-20 w-72 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                             <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-3 space-y-1">
-                                <a href="about.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
-                                    <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="landmark" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
-                                    <div><p class="text-sm font-bold text-cobe-black">About the Institute</p><p class="text-xs text-gray-500 mt-0.5">Our mission & genesis</p></div>
-                                </a>
-                                <a href="ethics.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
-                                    <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="scale" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
-                                    <div><p class="text-sm font-bold text-cobe-black">Governance & Ethics</p><p class="text-xs text-gray-500 mt-0.5">Data security & protocols</p></div>
-                                </a>
-                                <a href="partner.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
-                                    <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="handshake" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
-                                    <div><p class="text-sm font-bold text-cobe-black">Partner With Us</p><p class="text-xs text-gray-500 mt-0.5">Corporate & academic alliances</p></div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 4. Media & Insights -->
-                    <div class="relative group h-full flex items-center">
-                        <button class="flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-cobe-black transition-colors focus:outline-none">
-                            Media & Insights <i data-lucide="chevron-down" class="h-4 w-4 text-gray-400 group-hover:text-cobe-accent transition-colors"></i>
-                        </button>
-                        <div class="absolute left-0 top-20 w-72 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                            <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-3 space-y-1">
-                                <a href="media.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
-                                    <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="newspaper" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
-                                    <div><p class="text-sm font-bold text-cobe-black">Press & Media</p><p class="text-xs text-gray-500 mt-0.5">Assets & recent features</p></div>
-                                </a>
                                 <a href="speaking.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
                                     <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="mic" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
-                                    <div><p class="text-sm font-bold text-cobe-black">Corporate Speaking</p><p class="text-xs text-gray-500 mt-0.5">Institute Keynotes</p></div>
+                                    <div>
+                                        <p class="text-sm font-bold text-cobe-black">Corporate Speaking</p>
+                                        <p class="text-xs text-gray-500 mt-0.5">Keynotes & workshops</p>
+                                    </div>
+                                </a>
+                                <a href="consultancy.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
+                                    <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="briefcase" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
+                                    <div>
+                                        <p class="text-sm font-bold text-cobe-black">Consultancy</p>
+                                        <p class="text-xs text-gray-500 mt-0.5">Corporate & leadership strategy</p>
+                                    </div>
                                 </a>
                             </div>
                         </div>
                     </div>
 
+                    <!-- 3. Community Dropdown -->
+                    <div class="relative group h-full flex items-center">
+                        <button class="flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-cobe-black transition-colors focus:outline-none">
+                            Community <i data-lucide="chevron-down" class="h-4 w-4 text-gray-400 group-hover:text-cobe-accent transition-colors"></i>
+                        </button>
+                        <div class="absolute left-0 top-20 w-72 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-3 space-y-1">
+                                <a href="https://community.costofblackexcellence.com" target="_blank" rel="noopener" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
+                                    <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="users" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
+                                    <div>
+                                        <p class="text-sm font-bold text-cobe-black">The COBE Platform</p>
+                                        <p class="text-xs text-gray-500 mt-0.5">Join 1,000+ professionals</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
+                                    <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="book-open" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
+                                    <div>
+                                        <p class="text-sm font-bold text-cobe-black">Insights & Articles</p>
+                                        <p class="text-xs text-gray-500 mt-0.5">Read our latest blog posts</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. About Dropdown -->
+                    <div class="relative group h-full flex items-center">
+                        <button class="flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-cobe-black transition-colors focus:outline-none">
+                            About <i data-lucide="chevron-down" class="h-4 w-4 text-gray-400 group-hover:text-cobe-accent transition-colors"></i>
+                        </button>
+                        <div class="absolute left-0 top-20 w-72 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-3 space-y-1">
+                                <a href="meet-natasha.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
+                                    <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="user" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
+                                    <div>
+                                        <p class="text-sm font-bold text-cobe-black">Meet Natasha</p>
+                                        <p class="text-xs text-gray-500 mt-0.5">Researcher & Strategist</p>
+                                    </div>
+                                </a>
+                                <a href="media.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
+                                    <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="newspaper" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
+                                    <div>
+                                        <p class="text-sm font-bold text-cobe-black">Media & Press</p>
+                                        <p class="text-xs text-gray-500 mt-0.5">Speaker kit & features</p>
+                                    </div>
+                                </a>
+                                <a href="contact.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
+                                    <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="mail" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
+                                    <div>
+                                        <p class="text-sm font-bold text-cobe-black">Contact</p>
+                                        <p class="text-xs text-gray-500 mt-0.5">Get in touch directly</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTAs -->
                     <div class="flex items-center pl-6 border-l border-gray-200 space-x-4">
-                        <a href="contact.html" class="inline-flex items-center justify-center px-6 py-2.5 rounded-full text-sm font-bold text-cobe-black bg-cobe-accent hover:bg-cobe-dark hover:text-white transition-all shadow-sm">Contact Us</a>
+                        <a href="speaking.html#book-natasha" class="text-sm font-bold text-cobe-black hover:text-cobe-accent transition-colors">Book Natasha</a>
+                        <a href="https://community.costofblackexcellence.com" target="_blank" rel="noopener" class="inline-flex items-center justify-center px-6 py-2.5 rounded-full text-sm font-medium text-white bg-cobe-black hover:bg-cobe-dark transition-all shadow-sm hover:shadow-md">Join Community</a>
                     </div>
                 </div>
 
                 <!-- Mobile menu button -->
                 <div class="flex items-center lg:hidden">
-                    <button type="button" id="mobile-menu-btn" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none" title="Toggle mobile menu" aria-label="Toggle mobile menu">
+                    <button type="button" id="mobile-menu-btn" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none">
+                        <span class="sr-only">Open main menu</span>
                         <i data-lucide="menu" class="h-6 w-6"></i>
                     </button>
                 </div>
             </div>
         </div>
 
-        <!-- Mobile Menu Panel -->
+        <!-- Mobile Menu Panel (Categorised) -->
         <div class="lg:hidden hidden bg-white border-t border-gray-100 max-h-[80vh] overflow-y-auto" id="mobile-menu">
             <div class="px-4 py-6 space-y-6">
-                <!-- Research & Data -->
-                <div>
-                    <p class="px-3 text-xs font-bold text-cobe-accent uppercase tracking-wider mb-2">Research & Data</p>
-                    <div class="space-y-1">
-                        <a href="research.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Core Findings</a>
-                        <a href="data-methodology.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Data & Methodology</a>
-                        <a href="publications.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Publications</a>
-                    </div>
-                </div>
 
-                <!-- Audit Platform -->
+                <!-- Category 1 -->
                 <div>
-                    <p class="px-3 text-xs font-bold text-cobe-accent uppercase tracking-wider mb-2">The Audit Platform</p>
+                    <p class="px-3 text-xs font-bold text-cobe-accent uppercase tracking-wider mb-2">The Research</p>
                     <div class="space-y-1">
-                        <a href="audits.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Organisational Diagnostics</a>
+                        <a href="research.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Executive Summary</a>
+                        <a href="interactive-data.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Data Dashboard</a>
                         <a href="quiz.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">The Assessment</a>
                     </div>
                 </div>
 
-                <!-- Institute -->
+                <!-- Category 2 -->
                 <div>
-                    <p class="px-3 text-xs font-bold text-cobe-accent uppercase tracking-wider mb-2">Institute</p>
+                    <p class="px-3 text-xs font-bold text-cobe-accent uppercase tracking-wider mb-2">Work With Me</p>
                     <div class="space-y-1">
-                        <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">About the Institute</a>
-                        <a href="ethics.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Governance & Ethics</a>
-                        <a href="partner.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Partner With Us</a>
+                        <a href="speaking.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Corporate Speaking</a>
+                        <a href="consultancy.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Consultancy</a>
                     </div>
                 </div>
 
-                <!-- Media -->
+                <!-- Category 3 -->
                 <div>
-                    <p class="px-3 text-xs font-bold text-cobe-accent uppercase tracking-wider mb-2">Media & Insights</p>
+                    <p class="px-3 text-xs font-bold text-cobe-accent uppercase tracking-wider mb-2">Community</p>
                     <div class="space-y-1">
-                        <a href="media.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Press & Media</a>
-                        <a href="speaking.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Corporate Speaking</a>
+                        <a href="https://community.costofblackexcellence.com" target="_blank" rel="noopener" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">The COBE Platform</a>
+                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Insights & Articles</a>
+                    </div>
+                </div>
+
+                <!-- Category 4 -->
+                <div>
+                    <p class="px-3 text-xs font-bold text-cobe-accent uppercase tracking-wider mb-2">About</p>
+                    <div class="space-y-1">
+                        <a href="meet-natasha.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Meet Natasha</a>
+                        <a href="media.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Media & Press</a>
+                        <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Contact</a>
                     </div>
                 </div>
 
                 <!-- Mobile CTAs -->
                 <div class="pt-4 border-t border-gray-100 flex flex-col gap-3">
-                    <a href="contact.html" class="block w-full text-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-cobe-black hover:bg-cobe-dark">Contact Us</a>
+                    <a href="speaking.html#book-natasha" class="block w-full text-center px-5 py-3 border border-gray-300 text-base font-medium rounded-md text-cobe-black bg-white">Book Natasha</a>
+                    <a href="https://community.costofblackexcellence.com" target="_blank" rel="noopener" class="block w-full text-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-cobe-black hover:bg-cobe-dark">Join the Community</a>
                 </div>
             </div>
         </div>
