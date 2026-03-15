@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-<!-- 
-  INSTRUCTIONS: 
-  Replace the top portion of your HTML files (from <head> down to </head>) 
-  with this snippet. Remember to update the <title> and <meta> tags for each specific page!
--->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>The Excellence Tax™ Assessment | The Cost of Black Excellence Research Institute</title>
+    <!-- Primary SEO Data -->
+    <title>The Excellence Tax™ Assessment | The Cost of Black Excellence</title>
     <meta name="description" content="Calculate your workplace extraction level. Take our proprietary diagnostic assessment exploring the 15 Taxes of Black Excellence and receive your custom report.">
     <meta name="author" content="Natasha Williams">
 
-    <!-- Canonical Link (Update per page) -->
+    <!-- Canonical Link -->
     <link rel="canonical" href="https://www.costofblackexcellence.com/quiz.html">
 
     <!-- Preload Critical Assets -->
@@ -22,8 +18,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Favicons -->
-    <link rel="icon" type="image/png" href="assets/images/favicon.svg">
-    <link rel="apple-touch-icon" href="assets/images/favicon.svg">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
 
     <!-- NEW GOOGLE FONTS (Cormorant Garamond & DM Sans) -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -34,7 +30,7 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- NEW TAILWIND CONFIG (Maps your old classes to the new brand palette) -->
+    <!-- TAILWIND CONFIG (Maps your old classes to the new brand palette) -->
     <script>
         tailwind.config = {
             theme: {
@@ -45,13 +41,13 @@
                     },
                     colors: {
                         cobe: {
-                            black: '#1A1209',   /* The new Deep Brown */
-                            dark: '#2D2416',    /* The new Charcoal */
-                            accent: '#C8962A',  /* The richer Gold */
-                            light: '#FAF7F2',   /* The Pale Cream background */
-                            muted: '#5C4A30',   /* The new Mid Brown */
-                            rust: '#8B3A2A',    /* Added Rust for specific highlights */
-                            cream: '#F5F0E8'    /* Added Cream for cards */
+                            black: '#1A1209',   /* Deep Brown */
+                            dark: '#2D2416',    /* Charcoal */
+                            accent: '#C8962A',  /* Rich Gold */
+                            light: '#FAF7F2',   /* Pale Cream */
+                            muted: '#5C4A30',   /* Mid Brown */
+                            rust: '#8B3A2A',    /* Rust */
+                            cream: '#F5F0E8'    /* Cream */
                         }
                     }
                 }
@@ -61,15 +57,33 @@
     
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="assets/css/styles.css">
+
+    <style>
+        .fade-in-up { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; transform: translateY(20px); }
+        .delay-100 { animation-delay: 100ms; }
+        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+        
+        .hero-pattern {
+            background-color: #1A1209;
+            background-image: 
+                radial-gradient(ellipse 55% 65% at 92% 15%, rgba(200,150,42,0.08) 0%, transparent 65%), 
+                radial-gradient(ellipse 35% 45% at 5% 85%, rgba(139,58,42,0.07) 0%, transparent 60%);
+            position: relative;
+        }
+
+        /* Quiz Specific Animations */
+        .quiz-transition { transition: all 0.4s ease-in-out; }
+        .hide-step { opacity: 0; transform: scale(0.98) translateY(10px); pointer-events: none; position: absolute; visibility: hidden; }
+        .show-step { opacity: 1; transform: scale(1) translateY(0); position: relative; visibility: visible; }
+    </style>
 </head>
 <body class="antialiased font-sans flex flex-col min-h-screen bg-cobe-light">
 
-   <!-- Navigation (Institutional Mega Menu) -->
+    <!-- Navigation (Master Institutional Menu) -->
     <nav id="navbar" class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20">
                 <div class="flex items-center">
-                    <!-- Brand Logo & Typography -->
                     <a href="index.html" class="flex-shrink-0 inline-flex items-center gap-3 group">
                         <img src="assets/images/C.png" alt="COBE Logo" class="h-8 md:h-10 w-auto object-contain transition-transform group-hover:scale-105">
                         <div class="flex flex-col justify-center">
@@ -109,10 +123,10 @@
                         </div>
                     </div>
 
-                    <!-- 2. The Audit Platform -->
+                    <!-- 2. The Audit Platform (Active) -->
                     <div class="relative group h-full flex items-center">
-                        <button class="flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-cobe-black transition-colors focus:outline-none">
-                            The Audit Platform <i data-lucide="chevron-down" class="h-4 w-4 text-gray-400 group-hover:text-cobe-accent transition-colors"></i>
+                        <button class="flex items-center gap-1 text-sm font-medium text-cobe-black border-b-2 border-cobe-accent pb-1 h-full pt-1 focus:outline-none">
+                            The Audit Platform <i data-lucide="chevron-down" class="h-4 w-4 text-cobe-accent transition-colors"></i>
                         </button>
                         <div class="absolute left-0 top-20 w-72 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                             <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-3 space-y-1">
@@ -120,9 +134,9 @@
                                     <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="search" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
                                     <div><p class="text-sm font-bold text-cobe-black">Organisational Diagnostics</p><p class="text-xs text-gray-500 mt-0.5">Corporate audit services</p></div>
                                 </a>
-                                <a href="quiz.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
-                                    <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="clipboard-check" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
-                                    <div><p class="text-sm font-bold text-cobe-black">The Assessment</p><p class="text-xs text-gray-500 mt-0.5">Calculate your extraction zone</p></div>
+                                <a href="quiz.html" class="flex items-start gap-3 p-3 rounded-xl bg-gray-50 transition-colors group/item">
+                                    <div class="bg-cobe-accent/10 p-2 rounded-lg"><i data-lucide="clipboard-check" class="h-5 w-5 text-cobe-accent"></i></div>
+                                    <div><p class="text-sm font-bold text-cobe-black">The Assessment</p><p class="text-xs text-cobe-accent mt-0.5">Calculate your extraction zone</p></div>
                                 </a>
                             </div>
                         </div>
@@ -171,13 +185,13 @@
                     </div>
 
                     <div class="flex items-center pl-6 border-l border-gray-200 space-x-4">
-                        <a href="contact.html" class="inline-flex items-center justify-center px-6 py-2.5 rounded-full text-sm font-bold text-white bg-cobe-black hover:bg-cobe-dark transition-all shadow-sm">Contact Us</a>
+                        <a href="contact.html" class="inline-flex items-center justify-center px-6 py-2.5 rounded-full text-sm font-bold text-cobe-black bg-cobe-accent hover:bg-white transition-all shadow-md">Contact Us</a>
                     </div>
                 </div>
 
                 <!-- Mobile menu button -->
                 <div class="flex items-center lg:hidden">
-                    <button type="button" id="mobile-menu-btn" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none" title="Toggle navigation menu" aria-label="Toggle navigation menu">
+                    <button type="button" id="mobile-menu-btn" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none">
                         <i data-lucide="menu" class="h-6 w-6"></i>
                     </button>
                 </div>
@@ -199,7 +213,7 @@
                     <p class="px-3 text-xs font-bold text-cobe-accent uppercase tracking-wider mb-2">The Audit Platform</p>
                     <div class="space-y-1">
                         <a href="audits.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Organisational Diagnostics</a>
-                        <a href="quiz.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">The Assessment</a>
+                        <a href="quiz.html" class="block px-3 py-2 rounded-md text-base font-bold text-cobe-black bg-gray-50">The Assessment</a>
                     </div>
                 </div>
                 <div>
@@ -224,181 +238,90 @@
         </div>
     </nav>
 
-    <!-- Interactive Header -->
-    <section class="pt-32 pb-20 bg-cobe-black text-white hero-pattern relative overflow-hidden">
-        <!-- Accent Glow -->
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-cobe-accent/5 rounded-full blur-[150px] pointer-events-none"></div>
-
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 text-center fade-in-up">
-            <span class="text-cobe-accent font-semibold tracking-wider uppercase text-sm mb-4 block">Proprietary Diagnostic</span>
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-6">The Excellence Tax Assessment</h1>
-            <p class="text-lg text-gray-300 font-light max-w-2xl mx-auto mb-10 leading-relaxed">
-                Drawing from evidence gathered from 1,039 UK Black professionals, this tool evaluates the psychological and somatic toll of your current workplace environment. 
+    <!-- QUIZ HERO -->
+    <header class="pt-32 pb-16 bg-cobe-black text-white hero-pattern border-b border-cobe-accent/20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in-up">
+            <span class="text-cobe-accent font-bold tracking-[0.2em] uppercase text-[11px] mb-4 block">Self-Diagnostic Tool</span>
+            <h1 class="text-4xl md:text-5xl font-serif font-bold mb-6">The Excellence Tax™ Assessment</h1>
+            <p class="text-lg text-gray-300 font-light max-w-2xl mx-auto leading-relaxed">
+                Identify your extraction zones. This brief assessment measures the unseen structural, psychological, and somatic burdens you are currently navigating in your career.
             </p>
-            <div class="flex justify-center gap-4 flex-wrap">
-                <a href="#framework" class="inline-flex justify-center items-center px-8 py-4 border border-white/30 text-sm md:text-lg font-medium rounded-full text-white hover:bg-white/10 transition-all">
-                    Explore The Framework
-                </a>
-                <a href="#assessment-start" class="inline-flex justify-center items-center px-8 py-4 border border-transparent text-sm md:text-lg font-bold rounded-full text-cobe-black bg-cobe-accent hover:bg-white transition-all shadow-lg hover:shadow-xl">
-                    Start Assessment <i data-lucide="arrow-down" class="ml-2 h-5 w-5"></i>
-                </a>
-            </div>
-
-            <!-- Ongoing Research Callout -->
-            <div class="mt-12 pt-8 border-t border-white/10 max-w-xl mx-auto reveal delay-100">
-                <p class="text-sm text-gray-400 mb-3">The Institute's foundational research is ongoing. We are actively expanding our dataset.</p>
-                <a href="https://forms.gle/bC9S1gnHfLpJpZse6" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-cobe-accent hover:text-white transition-colors font-bold text-sm uppercase tracking-wider group">
-                    Add your voice to the national survey <i data-lucide="external-link" class="ml-2 h-4 w-4 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform"></i>
-                </a>
-            </div>
         </div>
     </section>
 
-    <!-- The 5 Categories Framework -->
-    <section id="framework" class="py-24 bg-white relative border-b border-gray-200">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 reveal">
-                <h2 class="text-3xl md:text-4xl font-serif font-bold text-cobe-black mb-6">The Excellence Tax™ Framework</h2>
-                <p class="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
-                    Our research identified fifteen specific burdens extracted from Black professionals, organised into five core categories. These taxes compound rather than diminish with career advancement, contradicting expectations that success brings security.
-                </p>
-            </div>
-
-            <!-- Stacked Diagram matching PDF (5 down to 1) -->
-            <div class="flex flex-col gap-6">
-                
-                <!-- Category 5: Resistance Taxes -->
-                <div class="reveal bg-cobe-black text-white p-8 md:p-10 rounded-3xl shadow-xl flex flex-col md:flex-row gap-6 md:gap-8 items-start relative overflow-hidden group">
-                    <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-cobe-accent/20 rounded-full blur-3xl pointer-events-none group-hover:bg-cobe-accent/30 transition-all"></div>
-                    <div class="w-16 h-16 bg-cobe-accent text-cobe-black rounded-full flex items-center justify-center font-serif font-bold text-3xl shrink-0 z-10 shadow-lg">5</div>
-                    <div class="z-10 flex-grow">
-                        <h3 class="text-2xl font-bold font-serif mb-2">Resistance Taxes</h3>
-                        <p class="text-xs font-bold tracking-widest text-cobe-accent uppercase mb-4">Evidence Stewardship | Infrastructure Building | Intergenerational Load</p>
-                        <p class="text-gray-300 leading-relaxed">The unpaid "justice labour" performed to protect those who follow, encompassing evidence stewardship and intergenerational load.</p>
-                    </div>
-                </div>
-
-                <!-- Category 4: Leadership Taxes -->
-                <div class="reveal delay-100 bg-cobe-light p-8 md:p-10 rounded-3xl border border-gray-200 shadow-sm flex flex-col md:flex-row gap-6 md:gap-8 items-start hover:border-cobe-accent hover:shadow-md transition-all group">
-                    <div class="w-16 h-16 bg-white text-cobe-black rounded-full flex items-center justify-center font-serif font-bold text-3xl shrink-0 shadow-sm border border-gray-200 group-hover:bg-cobe-accent/10 group-hover:border-cobe-accent transition-colors">4</div>
-                    <div class="flex-grow">
-                        <h3 class="text-2xl font-bold font-serif text-cobe-black mb-2">Leadership Taxes</h3>
-                        <p class="text-xs font-bold tracking-widest text-gray-500 group-hover:text-cobe-accent uppercase mb-4 transition-colors">Threshold Fatigue | Unresourced Sponsorship | Exposure without Protection</p>
-                        <p class="text-gray-600 leading-relaxed">Challenges that paradoxically intensify with seniority, such as threshold fatigue and exposure without protection.</p>
-                    </div>
-                </div>
-
-                <!-- Category 3: Systemic Taxes -->
-                <div class="reveal delay-200 bg-cobe-light p-8 md:p-10 rounded-3xl border border-gray-200 shadow-sm flex flex-col md:flex-row gap-6 md:gap-8 items-start hover:border-cobe-accent hover:shadow-md transition-all group">
-                    <div class="w-16 h-16 bg-white text-cobe-black rounded-full flex items-center justify-center font-serif font-bold text-3xl shrink-0 shadow-sm border border-gray-200 group-hover:bg-cobe-accent/10 group-hover:border-cobe-accent transition-colors">3</div>
-                    <div class="flex-grow">
-                        <h3 class="text-2xl font-bold font-serif text-cobe-black mb-2">Systemic Taxes</h3>
-                        <p class="text-xs font-bold tracking-widest text-gray-500 group-hover:text-cobe-accent uppercase mb-4 transition-colors">Bias Navigation | Microaggression Absorption | Representational Burden</p>
-                        <p class="text-gray-600 leading-relaxed">These reflect institutional design and include bias navigation, microaggression absorption, and representational burden.</p>
-                    </div>
-                </div>
-
-                <!-- Category 2: Survival Taxes -->
-                <div class="reveal delay-300 bg-cobe-light p-8 md:p-10 rounded-3xl border border-gray-200 shadow-sm flex flex-col md:flex-row gap-6 md:gap-8 items-start hover:border-cobe-accent hover:shadow-md transition-all group">
-                    <div class="w-16 h-16 bg-white text-cobe-black rounded-full flex items-center justify-center font-serif font-bold text-3xl shrink-0 shadow-sm border border-gray-200 group-hover:bg-cobe-accent/10 group-hover:border-cobe-accent transition-colors">2</div>
-                    <div class="flex-grow">
-                        <h3 class="text-2xl font-bold font-serif text-cobe-black mb-2">Survival Taxes</h3>
-                        <p class="text-xs font-bold tracking-widest text-gray-500 group-hover:text-cobe-accent uppercase mb-4 transition-colors">Code Switching | Voice Suppression | Emotional Regulation</p>
-                        <p class="text-gray-600 leading-relaxed">These daily adaptations govern self-presentation, including code-switching, voice suppression, and emotional regulation.</p>
-                    </div>
-                </div>
-
-                <!-- Category 1: Foundation Taxes -->
-                <div class="reveal delay-300 bg-white p-8 md:p-10 rounded-3xl border-2 border-gray-200 shadow-md flex flex-col md:flex-row gap-6 md:gap-8 items-start hover:border-cobe-accent transition-all group relative">
-                    <div class="absolute left-0 bottom-0 w-2 h-full bg-gray-200 group-hover:bg-cobe-accent transition-colors rounded-l-3xl"></div>
-                    <div class="w-16 h-16 bg-gray-50 text-cobe-black rounded-full flex items-center justify-center font-serif font-bold text-3xl shrink-0 shadow-sm border border-gray-300 group-hover:bg-cobe-accent/10 group-hover:border-cobe-accent transition-colors">1</div>
-                    <div class="flex-grow">
-                        <h3 class="text-2xl font-bold font-serif text-cobe-black mb-2">Foundation Taxes</h3>
-                        <p class="text-xs font-bold tracking-widest text-gray-500 group-hover:text-cobe-accent uppercase mb-4 transition-colors">Performance Burden | Proof Burden | Perfection Burden</p>
-                        <p class="text-gray-600 leading-relaxed">These are the entry-level levies required just to establish baseline professional credibility: the performance, proof, and perfection burdens.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Assessment Area -->
-    <section id="assessment-start" class="py-24 bg-cobe-light relative overflow-hidden flex-grow">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+    <!-- QUIZ APPLICATION AREA -->
+    <main class="flex-grow py-16 bg-cobe-light relative">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             
-            <!-- Assessment Introduction -->
-            <div id="intro-card" class="text-center bg-white p-12 rounded-3xl shadow-xl border border-gray-100">
-                <i data-lucide="clipboard-list" class="w-12 h-12 text-cobe-accent mx-auto mb-6"></i>
-                <h2 class="text-3xl font-serif font-bold text-cobe-black mb-4">Start Your Diagnostic</h2>
-                <p class="text-gray-600 mb-8 max-w-lg mx-auto">
-                    Answer the following 15 questions to calculate exactly which taxes are extracting the highest toll on your potential.
-                </p>
-                <button onclick="startAssessment()" class="inline-flex justify-center items-center px-10 py-4 border border-transparent text-lg font-bold rounded-full text-white bg-cobe-black hover:bg-cobe-accent hover:text-cobe-black transition-all shadow-lg">
-                    Begin Assessment <i data-lucide="arrow-right" class="ml-2 h-5 w-5"></i>
-                </button>
-            </div>
-
-            <!-- The Assessment Container -->
-            <div id="assessment-container" class="hidden max-w-2xl mx-auto bg-white rounded-3xl p-8 md:p-12 shadow-2xl border border-gray-100 text-cobe-black">
+            <!-- The Card Container -->
+            <div class="bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden relative min-h-[400px] flex flex-col">
                 
-                <!-- Progress Bar -->
-                <div class="mb-8">
-                    <div class="flex justify-between text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">
-                        <span>Diagnostic Progress</span>
-                        <span id="progress-text">Question 1 of 15</span>
-                    </div>
-                    <div class="w-full bg-gray-100 rounded-full h-2">
-                        <div id="progress-bar" class="bg-cobe-accent h-2 rounded-full transition-all duration-500" style="width: 6.66%;"></div>
-                    </div>
+                <!-- Progress Bar Container -->
+                <div id="progress-container" class="w-full bg-gray-100 h-2 hidden">
+                    <div id="quiz-progress" class="bg-cobe-accent h-2 transition-all duration-500 ease-out w-0"></div>
                 </div>
 
-                <!-- DYNAMIC QUESTION CONTAINER -->
-                <!-- The 15 steps are generated dynamically via JavaScript to keep the HTML clean -->
-                <div id="dynamic-steps-container"></div>
-
-                <!-- Final Result & Lead Capture (KIT EMBEDDED FORM) -->
-                <div class="step" id="step-result">
-                    <div class="text-center mb-8">
-                        <div class="w-16 h-16 rounded-full mx-auto flex items-center justify-center mb-4 bg-cobe-black text-cobe-accent">
-                            <i data-lucide="bar-chart" class="w-8 h-8"></i>
+                <div class="p-8 md:p-12 flex-grow flex flex-col justify-center relative">
+                    
+                    <!-- STEP 0: INTRO SCREEN -->
+                    <div id="step-intro" class="quiz-transition show-step text-center">
+                        <div class="w-16 h-16 bg-cobe-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 text-cobe-accent">
+                            <i data-lucide="clipboard-list" class="w-8 h-8"></i>
                         </div>
-                        <h3 class="text-sm font-bold tracking-wider text-gray-500 uppercase mb-2">Diagnostic Complete</h3>
-                        <h2 class="text-3xl font-serif font-bold text-cobe-black mb-4">Your Highest Extraction Zones</h2>
-                        <p class="text-gray-600 leading-relaxed max-w-md mx-auto mb-8">
-                            Based on your responses, these are the top 3 systemic taxes currently impacting your performance and wellbeing.
+                        <h2 class="text-3xl font-serif font-bold text-cobe-black mb-4">Calculate Your Specific Tax Burden</h2>
+                        <p class="text-cobe-muted mb-8 max-w-lg mx-auto">
+                            The assessment consists of 7 questions aligned with the Institute's 15 Taxes framework. It takes less than 2 minutes to complete and provides an immediate evaluation of your risk of structural burnout.
                         </p>
+                        <button onclick="startQuiz()" class="inline-flex justify-center items-center px-8 py-4 border border-transparent text-sm font-bold rounded-lg text-white bg-cobe-black hover:bg-cobe-dark transition-all">
+                            Begin Assessment <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
+                        </button>
+                    </div>
+
+                    <!-- STEP 1: QUESTION SCREEN -->
+                    <div id="step-question" class="quiz-transition hide-step">
+                        <span id="question-counter" class="text-cobe-accent font-bold text-xs tracking-widest uppercase mb-4 block">Question 1 of 7</span>
+                        <h3 id="question-text" class="text-2xl font-serif font-bold text-cobe-black mb-8 leading-snug">
+                            <!-- Question text injected here via JS -->
+                        </h3>
                         
-                        <!-- Top 3 Results Injected Here -->
-                        <div id="top-3-results" class="space-y-4 text-left">
-                            <!-- Populated by JS -->
+                        <!-- Options Container -->
+                        <div id="options-container" class="space-y-3">
+                            <!-- Buttons injected here via JS -->
                         </div>
                     </div>
 
-                    <div class="bg-gray-50 border border-gray-200 p-6 rounded-2xl mt-8">
-                        <h4 class="font-bold text-cobe-black mb-2 text-center">Unlock Your Full Breakdown</h4>
-                        <p class="text-sm text-gray-500 text-center mb-6">Enter your email to receive a detailed PDF report of your specific Excellence Tax score and immediate somatic strategies for your high-risk areas.</p>
+                    <!-- STEP 2: RESULTS SCREEN -->
+                    <div id="step-results" class="quiz-transition hide-step text-center">
+                        <span class="text-cobe-accent font-bold tracking-[0.2em] uppercase text-[11px] mb-2 block">Diagnostic Complete</span>
+                        <h2 class="text-3xl font-serif font-bold text-cobe-black mb-4">Your Extraction Profile</h2>
                         
-                        <!-- KIT.COM FORM INTEGRATION -->
-                        <form action="https://app.kit.com/forms/8930871/subscriptions" method="POST" class="flex flex-col gap-4">
-                            <!-- Hidden input to pass their top 3 taxes to your Kit Custom Field. (Ensure you create a custom field in Kit for this if needed) -->
-                            <input type="hidden" name="fields[top_taxes]" id="hidden-score" value="">
-                            
-                            <input type="text" name="fields[first_name]" placeholder="First Name" required class="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-cobe-black focus:outline-none focus:ring-2 focus:ring-cobe-accent">
-                            <input type="email" name="email_address" placeholder="Professional Email Address" required class="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-cobe-black focus:outline-none focus:ring-2 focus:ring-cobe-accent">
-                            
-                            <button type="submit" class="w-full bg-cobe-black text-white font-bold rounded-lg px-4 py-3 hover:bg-cobe-accent hover:text-cobe-black transition-colors shadow-md">
-                                Send My Personalised Report
-                            </button>
-                        </form>
-                    </div>
-                </div>
+                        <div class="bg-gray-50 border border-gray-100 rounded-xl p-6 mb-8 text-left">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="font-bold text-cobe-black">Total Tax Burden Score:</span>
+                                <span id="score-display" class="font-serif font-bold text-2xl text-cobe-accent">0</span>
+                            </div>
+                            <h3 id="result-title" class="font-serif font-bold text-xl text-cobe-black mt-4 mb-2">Result Title</h3>
+                            <p id="result-description" class="text-sm text-cobe-muted leading-relaxed">
+                                Result description...
+                            </p>
+                        </div>
 
+                        <!-- Dynamic Call to Action -->
+                        <div id="result-cta-container">
+                            <!-- CTA injected here based on score -->
+                        </div>
+                        
+                        <button onclick="location.reload()" class="mt-8 text-xs font-bold tracking-wider uppercase text-gray-400 hover:text-cobe-accent transition-colors">
+                            Retake Assessment
+                        </button>
+                    </div>
+
+                </div>
             </div>
         </div>
-    </section>
+    </main>
 
-    <!-- Footer Snippet (KIT EMBEDDED FORM) -->
+    <!-- Master Footer -->
     <footer class="bg-cobe-dark text-white pt-16 pb-8 border-t border-white/10 mt-auto">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12 border-b border-white/10 pb-12">
@@ -416,10 +339,10 @@
                         Documenting workplace extraction. Building liberation infrastructure for Black and BAME professionals.
                     </p>
                     <div class="flex space-x-4">
-                        <a href="https://www.linkedin.com/in/nw-cobe/" target="_blank" rel="noopener noreferrer" title="Natasha Williams LinkedIn" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-cobe-accent hover:text-cobe-black transition-all">
+                        <a href="https://www.linkedin.com/in/nw-cobe/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-cobe-accent hover:text-cobe-black transition-all" aria-label="LinkedIn">
                             <i data-lucide="linkedin" class="h-5 w-5"></i>
                         </a>
-                        <a href="https://www.youtube.com/@NatashaWilliamsUK" target="_blank" rel="noopener noreferrer" title="Natasha Williams YouTube" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-cobe-accent hover:text-cobe-black transition-all">
+                        <a href="https://www.youtube.com/@NatashaWilliamsUK" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-cobe-accent hover:text-cobe-black transition-all" aria-label="YouTube">
                             <i data-lucide="youtube" class="h-5 w-5"></i>
                         </a>
                     </div>
@@ -455,9 +378,8 @@
 
                 <div>
                     <h3 class="font-bold text-white tracking-wider uppercase text-sm mb-4">Stay Updated</h3>
-                    <p class="text-gray-400 text-sm mb-4 leading-relaxed">Join HR leaders and professionals receiving insights on dismantling the Excellence Tax™.</p>
+                    <p class="text-gray-400 text-sm mb-4 leading-relaxed">Join 1,000+ professionals receiving insights on dismantling the Excellence Tax™.</p>
                     
-                    <!-- KIT.COM FORM INTEGRATION -->
                     <form action="https://app.kit.com/forms/8930871/subscriptions" method="POST" class="flex flex-col gap-2">
                         <input type="email" name="email_address" placeholder="Professional Email" required class="bg-white/5 border border-white/10 text-white rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-cobe-accent transition-colors w-full">
                         <button type="submit" class="bg-cobe-accent text-cobe-black font-bold rounded-lg px-4 py-2.5 text-sm hover:bg-white transition-colors w-full">Subscribe</button>
@@ -475,223 +397,179 @@
         </div>
     </footer>
 
-    <!-- Assessment JavaScript Logic for 15 Taxes -->
+    <!-- Assessment Logic & Initialization -->
     <script>
-        lucide.createIcons();
-
-        // Navbar shadow on scroll
-        window.addEventListener('scroll', () => {
-            const nav = document.getElementById('navbar');
-            if (nav) {
-                if (window.scrollY > 10) {
-                    nav.classList.add('shadow-sm');
-                    nav.classList.replace('bg-white/90', 'bg-white/95');
-                } else {
-                    nav.classList.remove('shadow-sm');
-                    nav.classList.replace('bg-white/95', 'bg-white/90');
-                }
+        document.addEventListener('DOMContentLoaded', function() {
+            // 1. Initialize Icons
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
             }
-        });
 
-        // Mobile menu toggle
-        document.getElementById('mobile-menu-btn').addEventListener('click', () => { 
-            document.getElementById('mobile-menu').classList.toggle('hidden'); 
-        });
+            // 2. Navbar Scroll Shadow
+            window.addEventListener('scroll', () => {
+                const nav = document.getElementById('navbar');
+                if (nav) {
+                    if (window.scrollY > 10) {
+                        nav.classList.add('shadow-sm');
+                        nav.classList.replace('bg-white/90', 'bg-white/95');
+                    } else {
+                        nav.classList.remove('shadow-sm');
+                        nav.classList.replace('bg-white/95', 'bg-white/90');
+                    }
+                }
+            });
 
-        // --- 15 TAXES DATA STRUCTURE ---
-        const questionsData = [
-            { id: 1, name: "The Competency Tax", text: "How often do you feel the need to work significantly harder than your peers just to achieve baseline recognition and respect?" },
-            { id: 2, name: "The Code-Switching Tax", text: "How frequently do you expend energy suppressing your natural language, tone, or cultural expression in professional settings?" },
-            { id: 3, name: "The Hypervigilance Tax", text: "How often do you find yourself continuously scanning your corporate environment to ensure physical or psychological safety?" },
-            { id: 4, name: "The Emotional Labour Tax", text: "How much of your professional energy goes into managing the fragility, guilt, or defensiveness of colleagues when discussing race or equity?" },
-            { id: 5, name: "The Representation Tax", text: "How often do you feel the isolating burden of being the 'only one' in the room, acting as the unofficial spokesperson for your demographic?" },
-            { id: 6, name: "The Tone Policing Tax", text: "How frequently do you intensely curate your passion or delivery to avoid being stereotyped as 'angry' or 'aggressive'?" },
-            { id: 7, name: "The 'Prove It Again' Tax", text: "How often are your past successes or qualifications discounted, forcing you to constantly re-establish your expertise?" },
-            { id: 8, name: "Diversity Champion Tax", text: "How often are you expected to lead, consult on, or fix organisational DEI failings without formal recognition or compensation?" },
-            { id: 9, name: "Microaggression Tax", text: "How frequently do you bear the cognitive load of processing, absorbing, and deciding how to navigate subtle, systemic biases?" },
-            { id: 10, name: "The Isolation Tax", text: "How often do you experience professional or social loneliness while navigating homogenous leadership spaces without a safe community?" },
-            { id: 11, name: "Systemic Gaslighting Tax", text: "How frequently have your explicit lived experiences of bias been denied, minimised, or reframed as 'misunderstandings' by management?" },
-            { id: 12, name: "The Retaliation Risk Tax", text: "How often do you feel a direct career risk or penalty associated with advocating for yourself, reporting injustice, or setting boundaries?" },
-            { id: 13, name: "Invisible Support Tax", text: "How frequently do you carry the disproportionate burden of informally mentoring and safeguarding junior BAME staff?" },
-            { id: 14, name: "The Authenticity Penalty", text: "How often have you faced direct professional or financial costs when actively choosing not to assimilate into white-dominant norms?" },
-            { id: 15, name: "The Somatic Tax", text: "How frequently do you experience physical exhaustion, chronic anxiety, or nervous system dysregulation as a direct result of your workplace environment?" }
-        ];
+            // 3. Mobile Menu Toggle
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            if (btn && menu) {
+                btn.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                });
+            }
 
-        // Standard Answer Options
-        const optionsHTML = `
-            <div class="space-y-3">
-                <label class="assessment-option">
-                    <input type="radio" value="4">
-                    <div class="option-box p-4 rounded-xl flex items-center">
-                        <div class="radio-circle w-5 h-5 rounded-full border-2 border-gray-300 mr-4 relative shrink-0 transition-colors"></div>
-                        <span class="font-medium text-gray-700">Constantly / Always. It is a daily requirement.</span>
-                    </div>
-                </label>
-                <label class="assessment-option">
-                    <input type="radio" value="3">
-                    <div class="option-box p-4 rounded-xl flex items-center">
-                        <div class="radio-circle w-5 h-5 rounded-full border-2 border-gray-300 mr-4 relative shrink-0 transition-colors"></div>
-                        <span class="font-medium text-gray-700">Often. It happens on a very regular basis.</span>
-                    </div>
-                </label>
-                <label class="assessment-option">
-                    <input type="radio" value="2">
-                    <div class="option-box p-4 rounded-xl flex items-center">
-                        <div class="radio-circle w-5 h-5 rounded-full border-2 border-gray-300 mr-4 relative shrink-0 transition-colors"></div>
-                        <span class="font-medium text-gray-700">Occasionally. Usually around specific events or people.</span>
-                    </div>
-                </label>
-                <label class="assessment-option">
-                    <input type="radio" value="1">
-                    <div class="option-box p-4 rounded-xl flex items-center">
-                        <div class="radio-circle w-5 h-5 rounded-full border-2 border-gray-300 mr-4 relative shrink-0 transition-colors"></div>
-                        <span class="font-medium text-gray-700">Rarely or Never. I do not experience this.</span>
-                    </div>
-                </label>
-            </div>
-        `;
+            // 4. Quiz Logic
+            const quizData = [
+                {
+                    question: "How often do you feel you must work harder than your peers to be seen as equally competent?",
+                    options: [
+                        { text: "Always. It is a daily requirement.", score: 4 },
+                        { text: "Often. I am highly conscious of avoiding mistakes.", score: 3 },
+                        { text: "Sometimes. It depends on the project or team.", score: 1 },
+                        { text: "Rarely. My competence is generally assumed.", score: 0 }
+                    ]
+                },
+                {
+                    question: "Do you actively suppress aspects of your identity (voice, hair, cultural expression) to maintain professional safety?",
+                    options: [
+                        { text: "Yes, heavily. I code-switch consistently.", score: 4 },
+                        { text: "Yes, moderately. I curate my delivery to avoid stereotypes.", score: 3 },
+                        { text: "Only in very specific high-stakes meetings.", score: 1 },
+                        { text: "No, I feel comfortable showing up authentically.", score: 0 }
+                    ]
+                },
+                {
+                    question: "How frequently do you find yourself scanning your workplace environment for potential microaggressions or bias?",
+                    options: [
+                        { text: "Constantly. I operate in a state of hypervigilance.", score: 4 },
+                        { text: "Frequently. I have to read the room carefully.", score: 3 },
+                        { text: "Occasionally, but it is not a primary concern.", score: 1 },
+                        { text: "Rarely. I feel psychologically safe.", score: 0 }
+                    ]
+                },
+                {
+                    question: "Are you expected to serve as the 'unofficial spokesperson' for diversity initiatives without additional compensation or formal recognition?",
+                    options: [
+                        { text: "Yes. I am the default person for these issues.", score: 4 },
+                        { text: "Yes, but I sometimes manage to set boundaries around it.", score: 2 },
+                        { text: "Rarely. My organisation handles this well.", score: 0 },
+                        { text: "No, I am not asked to do this.", score: 0 }
+                    ]
+                },
+                {
+                    question: "When advocating for yourself or raising a concern, how much do you worry about retaliation or being labelled 'aggressive'?",
+                    options: [
+                        { text: "A great deal. It often stops me from speaking up.", score: 4 },
+                        { text: "A fair amount. I have to heavily curate my tone.", score: 3 },
+                        { text: "Slightly. I am mindful but still advocate for myself.", score: 1 },
+                        { text: "Not at all. My feedback is welcomed.", score: 0 }
+                    ]
+                },
+                {
+                    question: "How much informal emotional labour do you undertake supporting junior Black/BAME staff in your organisation?",
+                    options: [
+                        { text: "A significant amount. I feel highly responsible for them.", score: 3 },
+                        { text: "Some. I mentor when I can find the capacity.", score: 2 },
+                        { text: "Very little.", score: 0 },
+                        { text: "Not applicable / No junior diverse staff.", score: 0 }
+                    ]
+                },
+                {
+                    question: "To what extent has navigating your workplace culture impacted your physical or emotional health (e.g., severe fatigue, insomnia, anxiety)?",
+                    options: [
+                        { text: "Severely. I am experiencing chronic symptoms of burnout.", score: 5 },
+                        { text: "Moderately. I am consistently exhausted by the environment.", score: 3 },
+                        { text: "Slightly. It is stressful but manageable.", score: 1 },
+                        { text: "Not at all. My health has not been impacted.", score: 0 }
+                    ]
+                }
+            ];
 
-        const totalSteps = 15;
+            let currentStep = 0;
+            let totalScore = 0;
 
-        // --- GENERATE HTML FOR STEPS ---
-        function generateSteps() {
-            const container = document.getElementById('dynamic-steps-container');
-            
-            questionsData.forEach((q, index) => {
-                const stepNum = index + 1;
-                const isFirst = stepNum === 1;
-                const isLast = stepNum === totalSteps;
+            window.startQuiz = function() {
+                document.getElementById('step-intro').classList.replace('show-step', 'hide-step');
+                document.getElementById('step-question').classList.replace('hide-step', 'show-step');
+                document.getElementById('progress-container').classList.remove('hidden');
+                loadQuestion();
+            };
+
+            function loadQuestion() {
+                const qData = quizData[currentStep];
+                document.getElementById('question-counter').innerText = `Question ${currentStep + 1} of ${quizData.length}`;
+                document.getElementById('question-text').innerText = qData.question;
                 
-                // Set radio names unique to the question
-                const specificOptionsHTML = optionsHTML.replace(/input type="radio"/g, `input type="radio" name="q${stepNum}"`);
+                const optionsContainer = document.getElementById('options-container');
+                optionsContainer.innerHTML = ''; // Clear old options
 
-                // Buttons
-                let buttonsHTML = '';
-                if(isFirst) {
-                    buttonsHTML = `<div class="mt-8 flex justify-end"><button onclick="nextStep(${stepNum})" class="px-8 py-3 bg-cobe-black text-white font-bold rounded-lg hover:bg-cobe-accent hover:text-cobe-black transition-colors">Next <i data-lucide="arrow-right" class="inline h-4 w-4 ml-1"></i></button></div>`;
-                } else if(isLast) {
-                    buttonsHTML = `<div class="mt-8 flex justify-between">
-                        <button onclick="prevStep(${stepNum})" class="px-6 py-3 text-gray-500 font-bold hover:text-cobe-black transition-colors">Back</button>
-                        <button onclick="calculateResults()" class="px-8 py-3 bg-cobe-accent text-cobe-black font-bold rounded-lg hover:bg-cobe-black hover:text-white transition-colors shadow-md">Calculate Results <i data-lucide="calculator" class="inline h-4 w-4 ml-1"></i></button>
-                    </div>`;
+                qData.options.forEach((opt) => {
+                    const btn = document.createElement('button');
+                    btn.className = "w-full text-left p-4 rounded-xl border border-gray-200 bg-white hover:border-cobe-accent hover:bg-gray-50 transition-all font-medium text-cobe-black text-sm md:text-base";
+                    btn.innerText = opt.text;
+                    btn.onclick = () => answerQuestion(opt.score);
+                    optionsContainer.appendChild(btn);
+                });
+
+                // Update Progress Bar
+                const progressPct = ((currentStep) / quizData.length) * 100;
+                document.getElementById('quiz-progress').style.width = `${progressPct}%`;
+            }
+
+            window.answerQuestion = function(score) {
+                totalScore += score;
+                currentStep++;
+
+                if (currentStep < quizData.length) {
+                    loadQuestion();
                 } else {
-                    buttonsHTML = `<div class="mt-8 flex justify-between">
-                        <button onclick="prevStep(${stepNum})" class="px-6 py-3 text-gray-500 font-bold hover:text-cobe-black transition-colors">Back</button>
-                        <button onclick="nextStep(${stepNum})" class="px-8 py-3 bg-cobe-black text-white font-bold rounded-lg hover:bg-cobe-accent hover:text-cobe-black transition-colors">Next <i data-lucide="arrow-right" class="inline h-4 w-4 ml-1"></i></button>
-                    </div>`;
+                    showResults();
+                }
+            };
+
+            function showResults() {
+                document.getElementById('step-question').classList.replace('show-step', 'hide-step');
+                document.getElementById('progress-container').classList.add('hidden');
+                document.getElementById('step-results').classList.replace('hide-step', 'show-step');
+                
+                document.getElementById('score-display').innerText = totalScore;
+                
+                const titleEl = document.getElementById('result-title');
+                const descEl = document.getElementById('result-description');
+                const ctaContainer = document.getElementById('result-cta-container');
+
+                if (totalScore >= 20) {
+                    titleEl.innerText = "Severe Extraction Zone (High Risk)";
+                    titleEl.classList.add('text-cobe-rust');
+                    descEl.innerHTML = `Your score indicates that you are paying a very high Excellence Tax™ and operating in an environment of severe systemic extraction. The physiological and emotional toll of hypervigilance, identity suppression, and competency proving is likely leading to chronic burnout. <br><br><strong>You cannot intellect your way out of this environment.</strong> We strongly recommend seeking structurally-aware support.`;
+                    ctaContainer.innerHTML = `<a href="cobe-community.html" class="inline-flex justify-center items-center px-8 py-4 border border-transparent text-sm font-bold rounded-lg text-white bg-cobe-rust hover:bg-cobe-black transition-all w-full md:w-auto">Explore The COBE Community <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i></a>`;
+                } 
+                else if (totalScore >= 10) {
+                    titleEl.innerText = "Moderate Extraction Zone (Warning)";
+                    titleEl.classList.add('text-cobe-accent');
+                    descEl.innerHTML = `Your score indicates a moderate but compounding Excellence Tax™ burden. You are frequently having to curate your identity and work harder than your peers to maintain professional standing. While you may be managing the stress currently, this level of cognitive load is not sustainable long-term. <br><br>Awareness is the first step. Equip yourself with the data to validate your experience.`;
+                    ctaContainer.innerHTML = `<a href="report-landing.html" class="inline-flex justify-center items-center px-8 py-4 border border-transparent text-sm font-bold rounded-lg text-cobe-black bg-cobe-accent hover:bg-cobe-light hover:border-cobe-accent transition-all w-full md:w-auto">Download the Executive Summary <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i></a>`;
+                } 
+                else {
+                    titleEl.innerText = "Low Extraction Zone";
+                    descEl.innerHTML = `Your score indicates a relatively low Excellence Tax™ burden. You likely operate in an environment with higher psychological safety where you can advocate for yourself and show up authentically without severe professional penalties. However, as an ally or leader, understanding these mechanics is crucial for protecting diverse talent within your organisation.`;
+                    ctaContainer.innerHTML = `<a href="audits.html" class="inline-flex justify-center items-center px-8 py-4 border border-transparent text-sm font-bold rounded-lg text-white bg-cobe-black hover:bg-cobe-dark transition-all w-full md:w-auto">Explore Organisational Diagnostics <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i></a>`;
                 }
 
-                const stepHTML = `
-                    <div class="step ${isFirst ? 'active' : ''}" id="step-${stepNum}">
-                        <div class="text-xs font-bold text-cobe-accent uppercase tracking-wider mb-2">Tax ${stepNum} of 15</div>
-                        <h3 class="text-2xl font-serif font-bold text-cobe-black mb-4">${q.name}</h3>
-                        <p class="text-gray-600 mb-8 font-medium text-lg leading-relaxed">${q.text}</p>
-                        ${specificOptionsHTML}
-                        ${buttonsHTML}
-                    </div>
-                `;
-                container.innerHTML += stepHTML;
-            });
-            lucide.createIcons();
-        }
-
-        // Initialize steps on load
-        generateSteps();
-
-        // --- NAVIGATION LOGIC ---
-        function startAssessment() {
-            document.getElementById('intro-card').style.display = 'none';
-            document.getElementById('assessment-container').classList.remove('hidden');
-        }
-
-        function updateProgress(stepNum) {
-            const percentage = (stepNum / totalSteps) * 100;
-            document.getElementById('progress-bar').style.width = `${percentage}%`;
-            
-            if(stepNum <= totalSteps) {
-                document.getElementById('progress-text').innerText = `Question ${stepNum} of ${totalSteps}`;
-            } else {
-                document.getElementById('progress-text').innerText = `Analysis Complete`;
-                document.getElementById('progress-bar').classList.remove('bg-cobe-accent');
-                document.getElementById('progress-bar').classList.add('bg-cobe-black');
+                // Re-init icons for dynamic CTA
+                if (typeof lucide !== 'undefined') { lucide.createIcons(); }
             }
-        }
-
-        function nextStep(currentStep) {
-            const radios = document.getElementsByName(`q${currentStep}`);
-            let answered = false;
-            for(let i=0; i<radios.length; i++) {
-                if(radios[i].checked) { answered = true; break; }
-            }
-            if(!answered) { alert("Please select an option to continue."); return; }
-
-            document.getElementById(`step-${currentStep}`).classList.remove('active');
-            document.getElementById(`step-${currentStep + 1}`).classList.add('active');
-            updateProgress(currentStep + 1);
-        }
-
-        function prevStep(currentStep) {
-            document.getElementById(`step-${currentStep}`).classList.remove('active');
-            document.getElementById(`step-${currentStep - 1}`).classList.add('active');
-            updateProgress(currentStep - 1);
-        }
-
-        // --- ALGORITHM LOGIC ---
-        function calculateResults() {
-            const radios = document.getElementsByName(`q${totalSteps}`);
-            let answered = false;
-            for(let i=0; i<radios.length; i++) {
-                if(radios[i].checked) { answered = true; break; }
-            }
-            if(!answered) { alert("Please select an option to finish."); return; }
-
-            // Hide last step, show results
-            document.getElementById(`step-${totalSteps}`).classList.remove('active');
-            document.getElementById('step-result').classList.add('active');
-            updateProgress(totalSteps + 1);
-
-            // Collect Data
-            let taxResultsArray = [];
-            questionsData.forEach((q, index) => {
-                const selected = document.querySelector(`input[name="q${index+1}"]:checked`);
-                const score = selected ? parseInt(selected.value) : 1;
-                taxResultsArray.push({ name: q.name, score: score });
-            });
-
-            // Sort by highest score first
-            taxResultsArray.sort((a, b) => b.score - a.score);
-
-            // Get Top 3
-            const top3 = taxResultsArray.slice(0, 3);
-            
-            // Build the string for the Hidden Kit Field
-            const kitString = top3.map(tax => tax.name).join(", ");
-            document.getElementById('hidden-score').value = kitString;
-
-            // Render Top 3 visually in the UI
-            const resultsContainer = document.getElementById('top-3-results');
-            resultsContainer.innerHTML = ''; 
-            
-            top3.forEach((tax, i) => {
-                // Determine severity badge colour based on their specific score
-                let badgeColour = "bg-cobe-accent text-cobe-black";
-                let severity = "High Impact";
-                if(tax.score === 4) { badgeColour = "bg-red-100 text-red-700"; severity = "Critical Impact"; }
-                else if(tax.score <= 2) { badgeColour = "bg-gray-100 text-gray-600"; severity = "Low Impact"; }
-
-                resultsContainer.innerHTML += `
-                    <div class="p-4 border border-gray-200 rounded-xl bg-white shadow-sm flex items-center justify-between">
-                        <div>
-                            <span class="text-xs font-bold tracking-wider text-gray-400 uppercase mb-1 block">Priority ${i+1}</span>
-                            <h4 class="font-serif font-bold text-lg text-cobe-black">${tax.name}</h4>
-                        </div>
-                        <div class="px-3 py-1 rounded-full text-xs font-bold ${badgeColour}">
-                            ${severity}
-                        </div>
-                    </div>
-                `;
-            });
-        }
+        });
     </script>
 </body>
 </html>
