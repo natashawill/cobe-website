@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+<!-- 
+  INSTRUCTIONS: 
+  Replace the top portion of your HTML files (from <head> down to </head>) 
+  with this snippet. Remember to update the <title> and <meta> tags for each specific page!
+-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Primary SEO Data -->
-    <title>Home | The Cost of Black Excellence Research Institute</title>
-    <meta name="description" content="The Cost of Black Excellence (Excellence Tax) An independent research institute and corporate audit platform.">
-    <meta name="keywords" content="Black excellence, BAME professionals, workplace burnout, research institute, Excellence Tax, Natasha Williams, diversity and inclusion audits, HR strategy">
-    <meta name="author" content="The Cost of Black Excellence Research Institute">
+    <title>The Cost of Black Excellence Research Institute</title>
+    <meta name="description" content="Documenting workplace extraction and building liberation infrastructure for Black and BAME professionals.">
+    <meta name="author" content="Natasha Williams">
 
-    <!-- Canonical Link -->
+    <!-- Canonical Link (Update per page) -->
     <link rel="canonical" href="https://www.costofblackexcellence.com/">
 
     <!-- Preload Critical Assets -->
@@ -19,94 +22,45 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Favicons -->
-    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="icon" type="image/png" href="assets/images/favicon.svg">
     <link rel="apple-touch-icon" href="assets/images/favicon.svg">
 
-    <!-- Open Graph Data -->
-    <meta property="og:site_name" content="The Cost of Black Excellence Research Institute">
-    <meta property="og:title" content="Home | The Cost of Black Excellence">
-    <meta property="og:description" content="Documenting workplace extraction and building liberation infrastructure for Black and BAME professionals.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.costofblackexcellence.com/">
-    <meta property="og:image" content="https://www.costofblackexcellence.com/images/home-bg.jpg">
+    <!-- NEW GOOGLE FONTS (Cormorant Garamond & DM Sans) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
-    
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- Schema Markup -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Organization",
-          "@id": "https://www.costofblackexcellence.com/#organization",
-          "name": "The Cost of Black Excellence Research Institute",
-          "url": "https://www.costofblackexcellence.com/",
-          "logo": "https://www.costofblackexcellence.com/images/favicon.svg",
-          "founder": {
-            "@id": "https://www.costofblackexcellence.com/#founder"
-          }
-        },
-        {
-          "@type": "Person",
-          "@id": "https://www.costofblackexcellence.com/#founder",
-          "name": "Natasha Williams",
-          "jobTitle": "Lead Researcher & Founder",
-          "url": "https://www.costofblackexcellence.com/about.html"
-        }
-      ]
-    }
-    </script>
-
+    <!-- NEW TAILWIND CONFIG (Maps your old classes to the new brand palette) -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
+                        sans: ['DM Sans', 'sans-serif'],
+                        serif: ['Cormorant Garamond', 'serif'],
                     },
                     colors: {
                         cobe: {
-                            black: '#121212',
-                            dark: '#1f1f1f',
-                            accent: '#C5A880',
-                            light: '#f9f9f9',
-                            muted: '#666666'
+                            black: '#1A1209',   /* The new Deep Brown */
+                            dark: '#2D2416',    /* The new Charcoal */
+                            accent: '#C8962A',  /* The richer Gold */
+                            light: '#FAF7F2',   /* The Pale Cream background */
+                            muted: '#5C4A30',   /* The new Mid Brown */
+                            rust: '#8B3A2A',    /* Added Rust for specific highlights */
+                            cream: '#F5F0E8'    /* Added Cream for cards */
                         }
                     }
                 }
             }
         }
     </script>
+    
+    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="assets/css/styles.css">
-    <style>
-        .fade-in-up { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; transform: translateY(20px); }
-        .delay-100 { animation-delay: 100ms; }
-        .delay-200 { animation-delay: 200ms; }
-        .delay-300 { animation-delay: 300ms; }
-        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
-        
-        /* Scroll Reveal Animations */
-        .reveal {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .reveal-delay-100 { transition-delay: 100ms; }
-        .reveal-delay-200 { transition-delay: 200ms; }
-    </style>
 </head>
 <body class="antialiased font-sans flex flex-col min-h-screen">
 
@@ -450,19 +404,22 @@
         </div>
     </section>
 
-    <!-- Footer Snippet -->
+   <!-- Universal Footer Snippet -->
     <footer class="bg-cobe-dark text-white pt-16 pb-8 border-t border-white/10 mt-auto">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12 border-b border-white/10 pb-12">
                 
+                <!-- Brand & Socials -->
                 <div class="lg:col-span-1">
-                    <!-- Typography Logo -->
-                    <a href="index.html" class="inline-flex flex-col mb-4 group">
-                        <div class="font-serif font-bold text-2xl tracking-tight text-white leading-none group-hover:text-cobe-accent transition-colors">
-                            The Cost of Black Excellence<span class="text-cobe-accent group-hover:text-white transition-colors">.</span>
-                        </div>
-                        <div class="font-sans font-medium text-[0.65rem] tracking-[0.3em] text-gray-400 mt-1.5 pl-0.5 opacity-80">
-                            RESEARCH INSTITUTE
+                    <a href="index.html" class="inline-flex items-center gap-3 mb-4 group">
+                        <img src="assets/images/C.png" alt="COBE Logo" class="h-8 md:h-10 w-auto object-contain transition-transform group-hover:scale-105">
+                        <div class="flex flex-col justify-center">
+                            <div class="font-serif font-bold text-xl md:text-2xl tracking-tight text-white group-hover:text-cobe-accent transition-colors leading-none">
+                                The Cost of Black Excellence<span class="text-cobe-accent group-hover:text-white transition-colors">.</span>
+                            </div>
+                            <div class="font-sans font-medium text-[0.55rem] md:text-[0.65rem] tracking-[0.3em] text-gray-400 mt-1 pl-0.5 opacity-80">
+                                RESEARCH INSTITUTE
+                            </div>
                         </div>
                     </a>
                     <p class="text-gray-400 text-sm mb-6 leading-relaxed">
@@ -482,20 +439,17 @@
                     </div>
                 </div>
 
+                <!-- Research & Data -->
                 <div>
                     <h3 class="font-bold text-white tracking-wider uppercase text-sm mb-4">Research & Data</h3>
-                    <ul class="space-y-3 mb-8">
+                    <ul class="space-y-3">
                         <li><a href="research.html" class="text-gray-400 hover:text-cobe-accent text-sm transition-colors">Core Findings</a></li>
                         <li><a href="data-methodology.html" class="text-gray-400 hover:text-cobe-accent text-sm transition-colors">Data & Methodology</a></li>
                         <li><a href="publications.html" class="text-gray-400 hover:text-cobe-accent text-sm transition-colors">Publications</a></li>
                     </ul>
-                    <h3 class="font-bold text-white tracking-wider uppercase text-sm mb-4">The Audit Platform</h3>
-                    <ul class="space-y-3">
-                        <li><a href="audits.html" class="text-gray-400 hover:text-cobe-accent text-sm transition-colors">Organisational Diagnostics</a></li>
-                        <li><a href="quiz.html" class="text-gray-400 hover:text-cobe-accent text-sm transition-colors">The Assessment</a></li>
-                    </ul>
                 </div>
 
+                <!-- Left-aligned split column for Audit Platform & Institute -->
                 <div>
                     <h3 class="font-bold text-white tracking-wider uppercase text-sm mb-4">Institute</h3>
                     <ul class="space-y-3 mb-8">
@@ -503,6 +457,7 @@
                         <li><a href="ethics.html" class="text-gray-400 hover:text-cobe-accent text-sm transition-colors">Governance & Ethics</a></li>
                         <li><a href="partner.html" class="text-gray-400 hover:text-cobe-accent text-sm transition-colors">Partner With Us</a></li>
                     </ul>
+
                     <h3 class="font-bold text-white tracking-wider uppercase text-sm mb-4">Media & Insights</h3>
                     <ul class="space-y-3">
                         <li><a href="media.html" class="text-gray-400 hover:text-cobe-accent text-sm transition-colors">Press & Media</a></li>
@@ -510,19 +465,31 @@
                     </ul>
                 </div>
 
+                <!-- The Audit Platform & Subscription -->
                 <div>
+                    <h3 class="font-bold text-white tracking-wider uppercase text-sm mb-4">The Audit Platform</h3>
+                    <ul class="space-y-3 mb-8">
+                        <li><a href="audits.html" class="text-gray-400 hover:text-cobe-accent text-sm transition-colors">Organisational Diagnostics</a></li>
+                        <li><a href="quiz.html" class="text-gray-400 hover:text-cobe-accent text-sm transition-colors">The Assessment</a></li>
+                    </ul>
+
                     <h3 class="font-bold text-white tracking-wider uppercase text-sm mb-4">Stay Updated</h3>
-                    <p class="text-gray-400 text-sm mb-4 leading-relaxed">Join HR leaders and professionals receiving insights on dismantling the Excellence Tax™.</p>
-                    <form action="#" class="flex flex-col gap-2">
-                        <input type="email" placeholder="Professional Email" class="bg-white/5 border border-white/10 text-white rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-cobe-accent transition-colors w-full">
-                        <button type="button" class="bg-cobe-accent text-cobe-black font-bold rounded-lg px-4 py-2.5 text-sm hover:bg-white transition-colors w-full">Subscribe</button>
+                    <form action="https://app.kit.com/forms/8930871/subscriptions" method="POST" class="flex flex-col gap-2">
+                        <input type="email" name="email_address" placeholder="Professional Email" required class="bg-white/5 border border-white/10 text-white rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-cobe-accent transition-colors w-full">
+                        <button type="submit" class="bg-cobe-accent text-cobe-black font-bold rounded-lg px-4 py-2.5 text-sm hover:bg-white transition-colors w-full">Subscribe</button>
                     </form>
                 </div>
+
             </div>
 
-            <div class="flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
-                <p>&copy; 2026 The Cost of Black Excellence Research Institute. All rights reserved.</p>
-                <div class="flex space-x-6 mt-4 md:mt-0">
+            <!-- Legal & Copyright -->
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end text-xs text-gray-500 gap-6 pt-4">
+                <div class="space-y-2">
+                    <p>&copy; 2026 The Cost of Black Excellence Research Institute. All rights reserved.</p>
+                    <p>The Cost of Black Excellence Ltd is registered in England and Wales. Company No. 16147986.</p>
+                    <p>Registered Office: Birmingham.</p>
+                </div>
+                <div class="flex flex-wrap gap-4 md:space-x-6">
                     <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
                     <a href="terms.html" class="hover:text-white transition-colors">Terms & Conditions</a>
                 </div>

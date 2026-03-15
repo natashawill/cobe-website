@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+<!-- 
+  INSTRUCTIONS: 
+  Replace the top portion of your HTML files (from <head> down to </head>) 
+  with this snippet. Remember to update the <title> and <meta> tags for each specific page!
+-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Primary SEO Data -->
-    <title>Enquiry Received | The Cost of Black Excellence</title>
-    <meta name="robots" content="noindex, nofollow"> <!-- Prevents search engines from indexing -->
-    <meta name="author" content="The Cost of Black Excellence Research Institute">
+    <title>Enquiry Received | The Cost of Black Excellence Research Institute</title>
+    <meta name="description" content="Thank you for your enquiry. We will review your submission and get back to you shortly.">
+    <meta name="author" content="Natasha Williams">
+
+    <!-- Canonical Link (Update per page) -->
+    <link rel="canonical" href="https://www.costofblackexcellence.com/">
 
     <!-- Preload Critical Assets -->
     <link rel="preload" href="assets/css/styles.css" as="style">
@@ -15,52 +22,45 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Favicons -->
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-    <link rel="apple-touch-icon" href="images/favicon.svg">
+    <link rel="icon" type="image/png" href="assets/images/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/images/favicon.svg">
+
+    <!-- NEW GOOGLE FONTS (Cormorant Garamond & DM Sans) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
-    
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- Tailwind Config -->
+    <!-- NEW TAILWIND CONFIG (Maps your old classes to the new brand palette) -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
+                        sans: ['DM Sans', 'sans-serif'],
+                        serif: ['Cormorant Garamond', 'serif'],
                     },
                     colors: {
                         cobe: {
-                            black: '#121212',
-                            dark: '#1f1f1f',
-                            accent: '#C5A880',
-                            light: '#f9f9f9',
-                            muted: '#666666'
+                            black: '#1A1209',   /* The new Deep Brown */
+                            dark: '#2D2416',    /* The new Charcoal */
+                            accent: '#C8962A',  /* The richer Gold */
+                            light: '#FAF7F2',   /* The Pale Cream background */
+                            muted: '#5C4A30',   /* The new Mid Brown */
+                            rust: '#8B3A2A',    /* Added Rust for specific highlights */
+                            cream: '#F5F0E8'    /* Added Cream for cards */
                         }
                     }
                 }
             }
         }
     </script>
+    
+    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="assets/css/styles.css">
-    <style>
-        .fade-in-up { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; transform: translateY(20px); }
-        .delay-100 { animation-delay: 100ms; }
-        .delay-200 { animation-delay: 200ms; }
-        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
-        
-        .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
-        .reveal.active { opacity: 1; transform: translateY(0); }
-        
-        .hero-pattern { background-color: #121212; background-image: radial-gradient(#333 1px, transparent 1px); background-size: 32px 32px; }
-    </style>
 </head>
 <body class="antialiased font-sans flex flex-col min-h-screen bg-cobe-light">
 

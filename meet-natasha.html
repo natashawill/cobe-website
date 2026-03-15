@@ -12,108 +12,66 @@
   3. The <meta property="og:url"> and <link rel="canonical"> to match the specific page URL (e.g., /speaking.html)
 -->
 
+<!-- 
+  INSTRUCTIONS: 
+  Replace the top portion of your HTML files (from <head> down to </head>) 
+  with this snippet. Remember to update the <title> and <meta> tags for each specific page!
+-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- 1. Primary SEO Data -->
-    <title>The Cost of Black Excellence | Home</title>
-    <meta name="description" content="Documenting workplace extraction and building liberation infrastructure for Black and BAME professionals. Founded by researcher and somatic coach Natasha Williams.">
-    <meta name="keywords" content="Black excellence, BAME professionals, workplace burnout, somatic coaching, systemic extraction, Natasha Williams, diversity and inclusion, HR strategy, corporate consulting">
+    <title>Meet Natasha Williams | The Cost of Black Excellence</title>
+    <meta name="description" content="Meet Natasha Williams, the lead researcher behind The Cost of Black Excellence. Learn about her work, insights, and contributions to the research institute.">
     <meta name="author" content="Natasha Williams">
 
-    <!-- 2. Canonical Link (Prevents Duplicate Content Penalties) -->
-    <link rel="canonical" href="https://www.costofblackexcellence.com/">
+    <!-- Canonical Link (Update per page) -->
+    <link rel="canonical" href="https://www.costofblackexcellence.com/meet-natasha.html">
 
-    <!-- 3. Preload Critical Assets (Improves Page Load Speed) -->
+    <!-- Preload Critical Assets -->
     <link rel="preload" href="assets/css/styles.css" as="style">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- 4. Favicons -->
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-    <link rel="apple-touch-icon" href="images/favicon.svg">
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/images/favicon.svg">
 
-    <!-- 5. Open Graph Data (For LinkedIn, Facebook, iMessage sharing) -->
-    <meta property="og:site_name" content="The Cost of Black Excellence">
-    <meta property="og:title" content="The Cost of Black Excellence | Home">
-    <meta property="og:description" content="Documenting workplace extraction and building liberation infrastructure for Black and BAME professionals.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.costofblackexcellence.com/">
-    <meta property="og:image" content="https://www.costofblackexcellence.com/images/home-bg.jpg">
-    <!-- Note: og:image should point to a beautiful banner image on your live server! -->
-
-    <!-- 6. Twitter Card Data (For Twitter sharing) -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="The Cost of Black Excellence">
-    <meta name="twitter:description" content="Documenting workplace extraction and building liberation infrastructure for Black and BAME professionals.">
-    <meta name="twitter:image" content="https://www.costofblackexcellence.com/images/home-bg.jpg">
-
-    <!-- 7. Schema Markup (JSON-LD) for Google Rich Results -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Organization",
-          "@id": "https://www.costofblackexcellence.com/#organization",
-          "name": "The Cost of Black Excellence",
-          "url": "https://www.costofblackexcellence.com/",
-          "logo": "https://www.costofblackexcellence.com/images/favicon.svg",
-          "founder": {
-            "@id": "https://www.costofblackexcellence.com/#founder"
-          }
-        },
-        {
-          "@type": "Person",
-          "@id": "https://www.costofblackexcellence.com/#founder",
-          "name": "Natasha Williams",
-          "jobTitle": "Researcher, Wellbeing Strategist, and Trauma-Informed Somatic Resilience Coach",
-          "url": "https://www.costofblackexcellence.com/meet-natasha.html",
-          "sameAs": [
-            "https://www.linkedin.com/in/nw-cobe/",
-            "https://www.youtube.com/@NatashaWilliamsUK"
-          ]
-        }
-      ]
-    }
-    </script>
-
-    <!-- 8. Analytics & GDPR Cookie Consent Placeholders -->
-    <!-- [Paste your Google Analytics (GA4) or LinkedIn Insight Tag script here] -->
-    <!-- [Paste your CookieYes / Cookiebot script here] -->
+    <!-- NEW GOOGLE FONTS (Cormorant Garamond & DM Sans) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;display=swap" rel="stylesheet">
-    
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- Tailwind Config -->
+    <!-- NEW TAILWIND CONFIG (Maps your old classes to the new brand palette) -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
+                        sans: ['DM Sans', 'sans-serif'],
+                        serif: ['Cormorant Garamond', 'serif'],
                     },
                     colors: {
                         cobe: {
-                            black: '#121212',
-                            dark: '#1f1f1f',
-                            accent: '#C5A880',
-                            light: '#f9f9f9',
-                            muted: '#666666'
+                            black: '#1A1209',   /* The new Deep Brown */
+                            dark: '#2D2416',    /* The new Charcoal */
+                            accent: '#C8962A',  /* The richer Gold */
+                            light: '#FAF7F2',   /* The Pale Cream background */
+                            muted: '#5C4A30',   /* The new Mid Brown */
+                            rust: '#8B3A2A',    /* Added Rust for specific highlights */
+                            cream: '#F5F0E8'    /* Added Cream for cards */
                         }
                     }
                 }
             }
         }
     </script>
+    
+    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body class="antialiased font-sans flex flex-col min-h-screen">

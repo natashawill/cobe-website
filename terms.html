@@ -1,27 +1,65 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+<!-- 
+  INSTRUCTIONS: 
+  Replace the top portion of your HTML files (from <head> down to </head>) 
+  with this snippet. Remember to update the <title> and <meta> tags for each specific page!
+-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms & Conditions | The Cost of Black Excellence</title>
     
+    <title>Terms & Conditions | The Cost of Black Excellence Research Institute</title>
+    <meta name="description" content="Read the terms and conditions for using The Cost of Black Excellence Research Institute website and services.">
+    <meta name="author" content="Natasha Williams">
+
+    <!-- Canonical Link (Update per page) -->
+    <link rel="canonical" href="https://www.costofblackexcellence.com/terms.html">
+
+    <!-- Preload Critical Assets -->
+    <link rel="preload" href="assets/css/styles.css" as="style">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/images/favicon.svg">
+
+    <!-- NEW GOOGLE FONTS (Cormorant Garamond & DM Sans) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
+    <!-- NEW TAILWIND CONFIG (Maps your old classes to the new brand palette) -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Playfair Display', 'serif'] },
-                    colors: { cobe: { black: '#121212', dark: '#1f1f1f', accent: '#C5A880', light: '#f9f9f9', muted: '#666666' } }
+                    fontFamily: {
+                        sans: ['DM Sans', 'sans-serif'],
+                        serif: ['Cormorant Garamond', 'serif'],
+                    },
+                    colors: {
+                        cobe: {
+                            black: '#1A1209',   /* The new Deep Brown */
+                            dark: '#2D2416',    /* The new Charcoal */
+                            accent: '#C8962A',  /* The richer Gold */
+                            light: '#FAF7F2',   /* The Pale Cream background */
+                            muted: '#5C4A30',   /* The new Mid Brown */
+                            rust: '#8B3A2A',    /* Added Rust for specific highlights */
+                            cream: '#F5F0E8'    /* Added Cream for cards */
+                        }
+                    }
                 }
             }
         }
     </script>
+    
+    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body class="antialiased font-sans flex flex-col min-h-screen bg-white text-cobe-black">
