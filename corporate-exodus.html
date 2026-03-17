@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary SEO Data -->
+    <title>The Corporate Exodus Programme: Collective | The Cost of Black Excellence</title>
+    <meta name="description" content="A six-week group programme for Black professionals planning their exit from corporate employment. Offer design, financial foundations, and a complete 90-day plan.">
+    <meta name="author" content="Natasha Williams">
+
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://www.costofblackexcellence.com/corporate-exodus.html">
+
+    <!-- Preload Critical Assets -->
+    <link rel="preload" href="assets/css/styles.css" as="style">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="assets/images/favicon.svg">
+
+    <!-- Google Fonts (Cormorant Garamond & DM Sans) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['DM Sans', 'sans-serif'],
+                        serif: ['Cormorant Garamond', 'serif'],
+                    },
+                    colors: {
+                        cobe: {
+                            black: '#1A1209',   /* Deep Brown */
+                            dark: '#2D2416',    /* Charcoal */
+                            accent: '#C8962A',  /* Rich Gold */
+                            light: '#FAF7F2',   /* Pale Cream */
+                            muted: '#5C4A30',   /* Mid Brown */
+                            rust: '#8B3A2A',    /* Rust */
+                            cream: '#F5F0E8'    /* Cream */
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Specific Page Styles & Animations -->
+    <style>
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        
+        .hero-pattern {
+            background-color: #1A1209;
+            background-image: 
+                radial-gradient(ellipse 55% 65% at 95% 10%, rgba(139,58,42,0.14) 0%, transparent 65%), 
+                radial-gradient(ellipse 40% 50% at 0% 90%, rgba(200,150,42,0.07) 0%, transparent 60%);
+        }
+        
+        .closing-pattern {
+            background-color: #8B3A2A;
+            background-image: radial-gradient(ellipse 50% 70% at 50% 0%, rgba(200,150,42,0.12) 0%, transparent 65%);
+        }
+
+        /* Accordion transition styles */
+        .accordion-content {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.3s ease-out;
+        }
+        .accordion-content.is-open {
+            grid-template-rows: 1fr;
+        }
+        .accordion-inner {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="antialiased font-sans text-cobe-black bg-cobe-light flex flex-col min-h-screen">
+
+    <!-- Reading Progress Bar -->
+    <div id="progress-container" class="fixed top-0 left-0 w-full h-1 z-[60] bg-transparent">
+        <div id="progress" class="h-full bg-gradient-to-r from-cobe-rust via-cobe-accent to-yellow-400 w-0 transition-all duration-150"></div>
+    </div>
+
+    <!-- Master Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex-shrink-0 inline-flex items-center gap-3 group">
+                        <img src="assets/images/C.png" alt="COBE Logo" class="h-8 md:h-10 w-auto object-contain transition-transform group-hover:scale-105">
+                        <div class="flex flex-col justify-center">
+                            <div class="font-serif font-bold text-xl md:text-2xl tracking-tight text-cobe-black leading-none group-hover:text-cobe-accent transition-colors">
+                                The Cost of Black Excellence<span class="text-cobe-accent group-hover:text-cobe-black transition-colors">.</span>
+                            </div>
+                            <div class="font-sans font-medium text-[0.55rem] md:text-[0.65rem] tracking-[0.3em] text-gray-500 mt-1 pl-0.5">
+                                RESEARCH INSTITUTE
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Desktop Mega Menu -->
+                <div class="hidden lg:flex lg:items-center lg:space-x-8 h-full">
+                    
+                    <!-- 1. Research & Data -->
+                    <div class="relative group h-full flex items-center">
+                        <button class="flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-cobe-black transition-colors focus:outline-none">
+                            Research & Data <i data-lucide="chevron-down" class="h-4 w-4 text-gray-400 group-hover:text-cobe-accent transition-colors"></i>
+                        </button>
+                        <div class="absolute left-0 top-20 w-72 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-3 space-y-1">
+                                <a href="research.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
+                                    <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="file-text" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
+                                    <div><p class="text-sm font-bold text-cobe-black">Core Findings</p><p class="text-xs text-gray-500 mt-0.5">Read the executive summary</p></div>
+                                </a>
+                                <a href="data-methodology.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
+                                    <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="bar-chart-2" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
+                                    <div><p class="text-sm font-bold text-cobe-black">Data & Methodology</p><p class="text-xs text-gray-500 mt-0.5">Explore the dashboard</p></div>
+                                </a>
+                                <a href="publications.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
+                                    <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="book-open" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
+                                    <div><p class="text-sm font-bold text-cobe-black">Publications</p><p class="text-xs text-gray-500 mt-0.5">Whitepapers & articles</p></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. The Audit Platform -->
+                    <div class="relative group h-full flex items-center">
+                        <button class="flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-cobe-black transition-colors focus:outline-none">
+                            The Audit Platform <i data-lucide="chevron-down" class="h-4 w-4 text-gray-400 group-hover:text-cobe-accent transition-colors"></i>
+                        </button>
+                        <div class="absolute left-0 top-20 w-72 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-3 space-y-1">
+                                <a href="audits.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
+                                    <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="search" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
+                                    <div><p class="text-sm font-bold text-cobe-black">Organisational Diagnostics</p><p class="text-xs text-gray-500 mt-0.5">Corporate audit services</p></div>
+                                </a>
+                                <a href="quiz.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
+                                    <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="clipboard-check" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
+                                    <div><p class="text-sm font-bold text-cobe-black">The Assessment</p><p class="text-xs text-gray-500 mt-0.5">Calculate your extraction zone</p></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Institute (Active/Open Section for Community/Exodus) -->
+                    <div class="relative group h-full flex items-center">
+                        <button class="flex items-center gap-1 text-sm font-medium text-cobe-black border-b-2 border-cobe-accent pb-1 h-full pt-1 focus:outline-none">
+                            Institute <i data-lucide="chevron-down" class="h-4 w-4 text-cobe-accent transition-colors"></i>
+                        </button>
+                        <div class="absolute left-0 top-20 w-72 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-3 space-y-1">
+                                <a href="about.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
+                                    <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="landmark" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
+                                    <div><p class="text-sm font-bold text-cobe-black">About the Institute</p><p class="text-xs text-gray-500 mt-0.5">Our mission & genesis</p></div>
+                                </a>
+                                <a href="cobe-community.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
+                                    <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="users" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
+                                    <div><p class="text-sm font-bold text-cobe-black">The COBE Community</p><p class="text-xs text-gray-500 mt-0.5">Peer support & resources</p></div>
+                                </a>
+                                <!-- Corporate Exodus Link -->
+                                <a href="corporate-exodus.html" class="flex items-start gap-3 p-3 rounded-xl bg-gray-50 transition-colors group/item">
+                                    <div class="bg-cobe-accent/10 p-2 rounded-lg"><i data-lucide="door-open" class="h-5 w-5 text-cobe-accent"></i></div>
+                                    <div><p class="text-sm font-bold text-cobe-black">Corporate Exodus</p><p class="text-xs text-cobe-accent mt-0.5">6-Week Business Programme</p></div>
+                                </a>
+                                <a href="ethics.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
+                                    <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="scale" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
+                                    <div><p class="text-sm font-bold text-cobe-black">Governance & Ethics</p><p class="text-xs text-gray-500 mt-0.5">Data security & protocols</p></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. Media & Insights -->
+                    <div class="relative group h-full flex items-center">
+                        <button class="flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-cobe-black transition-colors focus:outline-none">
+                            Media & Insights <i data-lucide="chevron-down" class="h-4 w-4 text-gray-400 group-hover:text-cobe-accent transition-colors"></i>
+                        </button>
+                        <div class="absolute left-0 top-20 w-72 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-3 space-y-1">
+                                <a href="media.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
+                                    <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="newspaper" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
+                                    <div><p class="text-sm font-bold text-cobe-black">Press & Media</p><p class="text-xs text-gray-500 mt-0.5">Assets & recent features</p></div>
+                                </a>
+                                <a href="speaking.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
+                                    <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="mic" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
+                                    <div><p class="text-sm font-bold text-cobe-black">Corporate Speaking</p><p class="text-xs text-gray-500 mt-0.5">Institute Keynotes</p></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center pl-6 border-l border-gray-200 space-x-4">
+                        <a href="contact.html" class="inline-flex items-center justify-center px-6 py-2.5 rounded-full text-sm font-bold text-cobe-black bg-cobe-accent hover:bg-white transition-all shadow-md">Contact Us</a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="flex items-center lg:hidden">
+                    <button type="button" id="mobile-menu-btn" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div class="lg:hidden hidden bg-white border-t border-gray-100 max-h-[80vh] overflow-y-auto" id="mobile-menu">
+            <div class="px-4 py-6 space-y-6">
+                <!-- ... Content omitted for brevity, but matches standard mobile nav ... -->
+                <div>
+                    <p class="px-3 text-xs font-bold text-cobe-accent uppercase tracking-wider mb-2">Institute</p>
+                    <div class="space-y-1">
+                        <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">About the Institute</a>
+                        <a href="cobe-community.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">The COBE Community</a>
+                        <a href="corporate-exodus.html" class="block px-3 py-2 rounded-md text-base font-bold text-cobe-black bg-gray-50">Corporate Exodus</a>
+                    </div>
+                </div>
+                <div class="pt-4 border-t border-gray-100 flex flex-col gap-3">
+                    <a href="contact.html" class="block w-full text-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-cobe-black bg-cobe-accent shadow-md">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero-pattern pt-36 pb-24 relative border-b border-cobe-accent/20">
+        <div class="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-cobe-rust to-transparent"></div>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center md:text-left">
+            <div class="inline-flex items-center gap-3 mb-6 justify-center md:justify-start reveal">
+                <span class="w-7 h-[1.5px] bg-cobe-rust block"></span>
+                <span class="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-cobe-rust">The Corporate Exodus Programme</span>
+            </div>
+            
+            <h1 class="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-cobe-cream mb-6 leading-tight reveal delay-100">
+                You already know what you are leaving.<br>
+                <em class="text-cobe-accent font-light">Now let us build what comes next.</em>
+            </h1>
+            
+            <p class="text-lg font-light text-cobe-cream/70 max-w-2xl mb-10 leading-relaxed mx-auto md:mx-0 reveal delay-200">
+                A six-week group programme for Black professionals who are ready to move from planning their exit to building a business that is <strong class="text-cobe-cream font-medium">genuinely theirs.</strong> Structured. Peer-supported. Financially grounded.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 items-center md:justify-start justify-center mb-16 reveal delay-[300ms]">
+                <a href="mailto:natasha@costofblackexcellence.com?subject=Corporate Exodus Programme Application" class="inline-flex justify-center items-center px-10 py-4 bg-cobe-rust text-cobe-cream text-xs font-bold uppercase tracking-widest rounded hover:bg-[#7A3224] transition-colors shadow-md w-full sm:w-auto">
+                    Apply for the Next Cohort &rarr;
+                </a>
+                <a href="#curriculum" class="inline-flex justify-center items-center px-10 py-4 border border-cobe-cream/20 text-cobe-cream text-xs font-bold uppercase tracking-widest rounded hover:border-cobe-accent hover:text-cobe-accent transition-colors w-full sm:w-auto">
+                    See the Curriculum
+                </a>
+            </div>
+
+            <!-- Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-cobe-accent/20 pt-10 reveal delay-[400ms]">
+                <div class="text-left md:border-r border-cobe-accent/20 pr-4">
+                    <span class="font-serif text-4xl font-bold text-cobe-accent leading-none block mb-2">6</span>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-cobe-cream/40 leading-snug">Weeks of structured cohort learning</span>
+                </div>
+                <div class="text-left md:border-r border-cobe-accent/20 pr-4">
+                    <span class="font-serif text-4xl font-bold text-cobe-accent leading-none block mb-2">90</span>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-cobe-cream/40 leading-snug">Day business plan by week six</span>
+                </div>
+                <div class="text-left md:border-r border-cobe-accent/20 pr-4">
+                    <span class="font-serif text-4xl font-bold text-cobe-accent leading-none block mb-2">94.3%</span>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-cobe-cream/40 leading-snug">Of Black professionals consider leaving</span>
+                </div>
+                <div class="text-left">
+                    <span class="font-serif text-4xl font-bold text-cobe-accent leading-none block mb-2">20+</span>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-cobe-cream/40 leading-snug">Years of business experience behind it</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- TRUST BAR -->
+    <div class="bg-cobe-rust py-6 border-b border-white/10">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap justify-center gap-x-10 gap-y-4">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-cobe-cream/80 flex items-center gap-2"><div class="w-1.5 h-1.5 bg-cobe-accent rounded-full"></div> Built on Excellence Tax™ research</span>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-cobe-cream/80 flex items-center gap-2"><div class="w-1.5 h-1.5 bg-cobe-accent rounded-full"></div> 1,039 Black professionals surveyed</span>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-cobe-cream/80 flex items-center gap-2"><div class="w-1.5 h-1.5 bg-cobe-accent rounded-full"></div> Live weekly sessions with Natasha</span>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-cobe-cream/80 flex items-center gap-2"><div class="w-1.5 h-1.5 bg-cobe-accent rounded-full"></div> Payment plans available</span>
+        </div>
+    </div>
+
+    <!-- INTRO SECTION -->
+    <section class="py-24 bg-cobe-light">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+            <div class="inline-flex items-center gap-3 mb-6">
+                <span class="w-6 h-[1.5px] bg-cobe-accent block"></span>
+                <span class="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-cobe-accent">Why This Programme Exists</span>
+            </div>
+            <h2 class="font-serif text-3xl md:text-5xl font-bold text-cobe-black mb-8 leading-tight">
+                Generic business programmes assume a <em class="text-cobe-rust font-light italic">level playing field.</em>
+            </h2>
+            <div class="text-cobe-muted space-y-6 text-base md:text-lg leading-relaxed">
+                <p>They assume an uncomplicated relationship with ambition, visibility, and money. They were not built for people who have spent years paying the Excellence Tax™ — the extra emotional labour, identity suppression, and constant proving required to succeed in environments that were not built for them.</p>
+                <p>The Corporate Exodus Programme was. It was built specifically for Black professionals who carry significant expertise from their corporate careers, know it has value, and need a structured path to translate it into a business that rewards them properly. Not a side hustle. Not a pivot. A business that belongs entirely to you and pays you accordingly.</p>
+                <p>You have spent years delivering excellence in environments that extracted from you. <strong class="text-cobe-black font-bold">This programme helps you extract it back.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHO BELONGS HERE -->
+    <section class="py-24 bg-cobe-cream border-y border-cobe-accent/20">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="reveal mb-12">
+                <div class="inline-flex items-center gap-3 mb-4">
+                    <span class="w-6 h-[1.5px] bg-cobe-accent block"></span>
+                    <span class="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-cobe-accent">Who This Programme Is For</span>
+                </div>
+                <h2 class="font-serif text-3xl md:text-5xl font-bold text-cobe-black mb-4">
+                    You belong here <em class="text-cobe-rust font-light italic">if...</em>
+                </h2>
+                <p class="text-cobe-muted text-base max-w-2xl leading-relaxed">
+                    The Corporate Exodus Programme is for Black professionals at a specific stage. Read the four descriptions below and see if you recognise yourself.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-[1px] bg-cobe-accent/20 border border-cobe-accent/20 reveal">
+                <!-- Item 1 -->
+                <div class="bg-cobe-cream p-8 md:p-10 flex flex-col hover:bg-white transition-colors">
+                    <span class="w-8 h-[3px] bg-gradient-to-r from-cobe-rust to-cobe-accent block mb-6 rounded-full"></span>
+                    <p class="text-base text-cobe-muted leading-relaxed">You are a <strong class="text-cobe-black">Black professional in corporate employment</strong> who is seriously planning your exit and wants to build a financially grounded transition rather than an impulsive one.</p>
+                </div>
+                <!-- Item 2 -->
+                <div class="bg-cobe-cream p-8 md:p-10 flex flex-col hover:bg-white transition-colors">
+                    <span class="w-8 h-[3px] bg-gradient-to-r from-cobe-rust to-cobe-accent block mb-6 rounded-full"></span>
+                    <p class="text-base text-cobe-muted leading-relaxed">You have <strong class="text-cobe-black">already left corporate</strong> and are generating some income but lack the structure, clarity, or confidence to build on it properly.</p>
+                </div>
+                <!-- Item 3 -->
+                <div class="bg-cobe-cream p-8 md:p-10 flex flex-col hover:bg-white transition-colors">
+                    <span class="w-8 h-[3px] bg-gradient-to-r from-cobe-rust to-cobe-accent block mb-6 rounded-full"></span>
+                    <p class="text-base text-cobe-muted leading-relaxed">You carry <strong class="text-cobe-black">significant expertise from your corporate career</strong> and know it has value, but have not yet translated it into a clear, positioned, marketable offer.</p>
+                </div>
+                <!-- Item 4 -->
+                <div class="bg-cobe-cream p-8 md:p-10 flex flex-col hover:bg-white transition-colors">
+                    <span class="w-8 h-[3px] bg-gradient-to-r from-cobe-rust to-cobe-accent block mb-6 rounded-full"></span>
+                    <p class="text-base text-cobe-muted leading-relaxed">You are <strong class="text-cobe-black">done performing excellence</strong> for organisations that extract from you and are ready to build something that rewards you properly for what you bring.</p>
+                </div>
+            </div>
+
+            <!-- The Not For You Block -->
+            <div class="mt-12 bg-cobe-accent/10 border-l-4 border-cobe-accent p-8 rounded-r-xl shadow-sm reveal">
+                <p class="text-sm text-cobe-dark leading-relaxed m-0">
+                    <strong class="text-cobe-black block mb-2">This programme is not for you if:</strong>
+                    You are looking for a quick income fix or an overnight business. It requires four to five hours per week across six weeks, genuine engagement with the financial planning work, and a willingness to be honest about where you are and what you are building toward. It rewards that investment with structure, accountability, and a peer cohort who understand the terrain.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUTCOMES SECTION -->
+    <section class="py-24 bg-cobe-black text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-cobe-accent/10 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="reveal mb-16 text-center md:text-left">
+                <div class="inline-flex items-center gap-3 mb-4 justify-center md:justify-start w-full md:w-auto">
+                    <span class="w-6 h-[1.5px] bg-cobe-accent block"></span>
+                    <span class="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-cobe-accent">What You Leave With</span>
+                </div>
+                <h2 class="font-serif text-3xl md:text-5xl font-bold text-cobe-cream mb-6">
+                    Six weeks from now, <em class="text-cobe-accent font-light italic">you will have built this.</em>
+                </h2>
+                <p class="text-cobe-cream/60 text-lg max-w-2xl leading-relaxed mx-auto md:mx-0">
+                    Every deliverable below is produced during the programme and belongs to you when you leave.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[1px] bg-cobe-accent/20 border border-cobe-accent/20 reveal">
+                <!-- 1 -->
+                <div class="bg-cobe-dark p-8 flex flex-col gap-4 hover:bg-cobe-black transition-colors">
+                    <span class="font-serif text-4xl font-bold text-cobe-accent/40 leading-none">01</span>
+                    <h3 class="font-serif text-xl font-bold text-cobe-cream leading-tight">A Clear Why Statement</h3>
+                    <p class="text-sm text-cobe-cream/60 leading-relaxed m-0">A specific, grounded articulation of what you are building and why — the foundation every future business decision rests on.</p>
+                </div>
+                <!-- 2 -->
+                <div class="bg-cobe-dark p-8 flex flex-col gap-4 hover:bg-cobe-black transition-colors">
+                    <span class="font-serif text-4xl font-bold text-cobe-accent/40 leading-none">02</span>
+                    <h3 class="font-serif text-xl font-bold text-cobe-cream leading-tight">A Defined Client Profile</h3>
+                    <p class="text-sm text-cobe-cream/60 leading-relaxed m-0">A detailed picture of the specific person you are building for, including their situation, their struggle, and what a solution changes for them.</p>
+                </div>
+                <!-- 3 -->
+                <div class="bg-cobe-dark p-8 flex flex-col gap-4 hover:bg-cobe-black transition-colors">
+                    <span class="font-serif text-4xl font-bold text-cobe-accent/40 leading-none">03</span>
+                    <h3 class="font-serif text-xl font-bold text-cobe-cream leading-tight">A Primary Offer With Pricing</h3>
+                    <p class="text-sm text-cobe-cream/60 leading-relaxed m-0">A structured, positioned offer with a clear outcome, format, and a price that reflects the value you deliver rather than the market floor.</p>
+                </div>
+                <!-- 4 -->
+                <div class="bg-cobe-dark p-8 flex flex-col gap-4 hover:bg-cobe-black transition-colors">
+                    <span class="font-serif text-4xl font-bold text-cobe-accent/40 leading-none">04</span>
+                    <h3 class="font-serif text-xl font-bold text-cobe-cream leading-tight">A Financial Transition Plan</h3>
+                    <p class="text-sm text-cobe-cream/60 leading-relaxed m-0">A realistic, honest picture of what the move requires — your break-even point, your runway, and your first revenue milestones.</p>
+                </div>
+                <!-- 5 -->
+                <div class="bg-cobe-dark p-8 flex flex-col gap-4 hover:bg-cobe-black transition-colors">
+                    <span class="font-serif text-4xl font-bold text-cobe-accent/40 leading-none">05</span>
+                    <h3 class="font-serif text-xl font-bold text-cobe-cream leading-tight">A Visibility Strategy</h3>
+                    <p class="text-sm text-cobe-cream/60 leading-relaxed m-0">A positioning statement and content plan that establishes your authority in your own voice for the people who most need what you offer.</p>
+                </div>
+                <!-- 6 -->
+                <div class="bg-cobe-dark p-8 flex flex-col gap-4 hover:bg-cobe-black transition-colors">
+                    <span class="font-serif text-4xl font-bold text-cobe-accent/40 leading-none">06</span>
+                    <h3 class="font-serif text-xl font-bold text-cobe-cream leading-tight">A 90-Day Business Plan</h3>
+                    <p class="text-sm text-cobe-cream/60 leading-relaxed m-0">Weekly activity targets, revenue milestones, and the three most important actions you will take in your first 30 days. Executable immediately.</p>
+                </div>
+                <!-- 7 -->
+                <div class="bg-cobe-dark p-8 flex flex-col gap-4 hover:bg-cobe-black transition-colors">
+                    <span class="font-serif text-4xl font-bold text-cobe-accent/40 leading-none">07</span>
+                    <h3 class="font-serif text-xl font-bold text-cobe-cream leading-tight">A Peer Cohort</h3>
+                    <p class="text-sm text-cobe-cream/60 leading-relaxed m-0">Black professionals at a similar stage who understand the terrain and will remain a genuine resource long after the six weeks end.</p>
+                </div>
+                <!-- 8 -->
+                <div class="bg-cobe-dark p-8 flex flex-col gap-4 hover:bg-cobe-black transition-colors">
+                    <span class="font-serif text-4xl font-bold text-cobe-accent/40 leading-none">08</span>
+                    <h3 class="font-serif text-xl font-bold text-cobe-cream leading-tight">COBE Community Access</h3>
+                    <p class="text-sm text-cobe-cream/60 leading-relaxed m-0">Full access to the COBE Community for the duration of the programme, connecting you with a wider network of professionals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CURRICULUM ACCORDION SECTION -->
+    <section id="curriculum" class="py-24 bg-cobe-light">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="reveal mb-12">
+                <div class="inline-flex items-center gap-3 mb-4">
+                    <span class="w-6 h-[1.5px] bg-cobe-accent block"></span>
+                    <span class="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-cobe-accent">The Six-Week Curriculum</span>
+                </div>
+                <h2 class="font-serif text-3xl md:text-5xl font-bold text-cobe-black mb-6">
+                    Six weeks. Six deliverables. <em class="text-cobe-rust font-light italic">One complete business plan.</em>
+                </h2>
+                <p class="text-cobe-muted text-base md:text-lg max-w-2xl leading-relaxed">
+                    Each week opens with a pre-recorded module you work through at your own pace, followed by a 90-minute live group session with Natasha. Click each week to expand.
+                </p>
+            </div>
+
+            <div class="flex flex-col gap-2 reveal">
+                <!-- Week 1 -->
+                <div class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+                    <button class="w-full flex items-stretch text-left hover:bg-gray-50 transition-colors focus:outline-none" onclick="toggleAccordion(this)">
+                        <div class="bg-cobe-black text-cobe-accent p-6 flex flex-col justify-center items-center shrink-0 min-w-[100px]">
+                            <span class="text-[10px] font-bold uppercase tracking-widest mb-1">Week</span>
+                            <span class="font-serif text-3xl font-bold leading-none">01</span>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col justify-center border-l border-gray-200">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-cobe-rust mb-1.5">Clarity Before Construction</span>
+                            <h3 class="font-serif text-xl font-bold text-cobe-black">Naming What You Are Building and Why</h3>
+                        </div>
+                        <div class="p-6 flex items-center justify-center text-cobe-accent">
+                            <i data-lucide="plus" class="w-6 h-6 transition-transform duration-300 icon-indicator"></i>
+                        </div>
+                    </button>
+                    <div class="accordion-content border-t border-gray-100 bg-gray-50">
+                        <div class="accordion-inner">
+                            <div class="p-6 md:p-8 md:pl-32 grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div>
+                                    <h4 class="text-xs font-bold uppercase tracking-widest text-cobe-accent mb-4">Module Covers</h4>
+                                    <ul class="space-y-3">
+                                        <li class="flex items-start gap-2 text-sm text-cobe-muted"><i data-lucide="arrow-right" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> Why the why question lands differently for Black professionals</li>
+                                        <li class="flex items-start gap-2 text-sm text-cobe-muted"><i data-lucide="arrow-right" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> The Excellence Tax as a business asset</li>
+                                        <li class="flex items-start gap-2 text-sm text-cobe-muted"><i data-lucide="arrow-right" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> The difference between a business idea and a business direction</li>
+                                        <li class="flex items-start gap-2 text-sm text-cobe-muted"><i data-lucide="arrow-right" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> The why statement framework</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs font-bold uppercase tracking-widest text-cobe-accent mb-4">Live Session</h4>
+                                    <ul class="space-y-3">
+                                        <li class="flex items-start gap-2 text-sm text-cobe-muted"><i data-lucide="arrow-right" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> Guided why exercise worked through together</li>
+                                        <li class="flex items-start gap-2 text-sm text-cobe-muted"><i data-lucide="arrow-right" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> Peer sharing and reflection on what surfaced</li>
+                                        <li class="flex items-start gap-2 text-sm text-cobe-muted"><i data-lucide="arrow-right" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> The most common traps when answering the why question</li>
+                                    </ul>
+                                </div>
+                                <div class="md:col-span-2 bg-cobe-accent/10 border-l-4 border-cobe-accent p-4 rounded-r-lg">
+                                    <span class="text-[10px] font-bold uppercase tracking-widest text-cobe-accent block mb-1">Week 1 Deliverable</span>
+                                    <p class="text-sm text-cobe-black font-medium">A working why statement and a clear sense of the expertise you are building from.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Week 2 -->
+                <div class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+                    <button class="w-full flex items-stretch text-left hover:bg-gray-50 transition-colors focus:outline-none" onclick="toggleAccordion(this)">
+                        <div class="bg-cobe-black text-cobe-accent p-6 flex flex-col justify-center items-center shrink-0 min-w-[100px]">
+                            <span class="text-[10px] font-bold uppercase tracking-widest mb-1">Week</span>
+                            <span class="font-serif text-3xl font-bold leading-none">02</span>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col justify-center border-l border-gray-200">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-cobe-rust mb-1.5">From Vague Audience to Specific Person</span>
+                            <h3 class="font-serif text-xl font-bold text-cobe-black">Understanding Who You Are Building For</h3>
+                        </div>
+                        <div class="p-6 flex items-center justify-center text-cobe-accent">
+                            <i data-lucide="plus" class="w-6 h-6 transition-transform duration-300 icon-indicator"></i>
+                        </div>
+                    </button>
+                    <div class="accordion-content border-t border-gray-100 bg-gray-50">
+                        <div class="accordion-inner">
+                            <div class="p-6 md:p-8 md:pl-32 grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div>
+                                    <h4 class="text-xs font-bold uppercase tracking-widest text-cobe-accent mb-4">Module Covers</h4>
+                                    <ul class="space-y-3">
+                                        <li class="flex items-start gap-2 text-sm text-cobe-muted"><i data-lucide="arrow-right" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> Why specificity strengthens a business rather than limiting it</li>
+                                        <li class="flex items-start gap-2 text-sm text-cobe-muted"><i data-lucide="arrow-right" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> How to identify your ideal client from lived experience</li>
+                                        <li class="flex items-start gap-2 text-sm text-cobe-muted"><i data-lucide="arrow-right" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> The difference between a target market and a target person</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs font-bold uppercase tracking-widest text-cobe-accent mb-4">Live Session</h4>
+                                    <ul class="space-y-3">
+                                        <li class="flex items-start gap-2 text-sm text-cobe-muted"><i data-lucide="arrow-right" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> Client profile workshop in the group</li>
+                                        <li class="flex items-start gap-2 text-sm text-cobe-muted"><i data-lucide="arrow-right" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> How to validate client assumptions before building the offer</li>
+                                        <li class="flex items-start gap-2 text-sm text-cobe-muted"><i data-lucide="arrow-right" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> Peer feedback on client profiles</li>
+                                    </ul>
+                                </div>
+                                <div class="md:col-span-2 bg-cobe-accent/10 border-l-4 border-cobe-accent p-4 rounded-r-lg">
+                                    <span class="text-[10px] font-bold uppercase tracking-widest text-cobe-accent block mb-1">Week 2 Deliverable</span>
+                                    <p class="text-sm text-cobe-black font-medium">A detailed client profile including their current situation, struggles, and what a genuine solution changes for them.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Week 3 -->
+                <div class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+                    <button class="w-full flex items-stretch text-left hover:bg-gray-50 transition-colors focus:outline-none" onclick="toggleAccordion(this)">
+                        <div class="bg-cobe-black text-cobe-accent p-6 flex flex-col justify-center items-center shrink-0 min-w-[100px]">
+                            <span class="text-[10px] font-bold uppercase tracking-widest mb-1">Week</span>
+                            <span class="font-serif text-3xl font-bold leading-none">03</span>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col justify-center border-l border-gray-200">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-cobe-rust mb-1.5">Translating Expertise into Revenue</span>
+                            <h3 class="font-serif text-xl font-bold text-cobe-black">Building a Viable Offer</h3>
+                        </div>
+                        <div class="p-6 flex items-center justify-center text-cobe-accent">
+                            <i data-lucide="plus" class="w-6 h-6 transition-transform duration-300 icon-indicator"></i>
+                        </div>
+                    </button>
+                    <div class="accordion-content border-t border-gray-100 bg-gray-50">
+                        <div class="accordion-inner">
+                            <div class="p-6 md:p-8 md:pl-32 grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div>
+                                    <h4 class="text-xs font-bold uppercase tracking-widest text-cobe-accent mb-4">Module Covers</h4>
+                                    <ul class="space-y-3">
+                                        <li class="flex items-start gap-2 text-sm text-cobe-muted"><i data-lucide="arrow-right" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> The anatomy of a well-structured offer</li>
+                                        <li class="flex items-start gap-2 text-sm text-cobe-muted"><i data-lucide="arrow-right" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> Common offer mistakes made by professionals in transition</li>
+                                        <li class="flex items-start gap-2 text-sm text-cobe-muted"><i data-lucide="arrow-right" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> Packaging expertise into consulting, advisory, or coaching</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs font-bold uppercase tracking-widest text-cobe-accent mb-4">Live Session</h4>
+                                    <ul class="space-y-3">
+                                        <li class="flex items-start gap-2 text-sm text-cobe-muted"><i data-lucide="arrow-right" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> Offer design workshop: building your primary offer together</li>
+                                        <li class="flex items-start gap-2 text-sm text-cobe-muted"><i data-lucide="arrow-right" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> Pricing your offer to sustain the business and reflect your value</li>
+                                        <li class="flex items-start gap-2 text-sm text-cobe-muted"><i data-lucide="arrow-right" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> Peer review of offer drafts</li>
+                                    </ul>
+                                </div>
+                                <div class="md:col-span-2 bg-cobe-accent/10 border-l-4 border-cobe-accent p-4 rounded-r-lg">
+                                    <span class="text-[10px] font-bold uppercase tracking-widest text-cobe-accent block mb-1">Week 3 Deliverable</span>
+                                    <p class="text-sm text-cobe-black font-medium">A defined primary offer with a clear outcome, format, and price. A one-paragraph description in plain language.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Week 4 -->
+                <div class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+                    <button class="w-full flex items-stretch text-left hover:bg-gray-50 transition-colors focus:outline-none" onclick="toggleAccordion(this)">
+                        <div class="bg-cobe-black text-cobe-accent p-6 flex flex-col justify-center items-center shrink-0 min-w-[100px]">
+                            <span class="text-[10px] font-bold uppercase tracking-widest mb-1">Week</span>
+                            <span class="font-serif text-3xl font-bold leading-none">04</span>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col justify-center border-l border-gray-200">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-cobe-rust mb-1.5">Financially Sustainable From the Start</span>
+                            <h3 class="font-serif text-xl font-bold text-cobe-black">Financial Foundations for the Transition</h3>
+                        </div>
+                        <div class="p-6 flex items-center justify-center text-cobe-accent">
+                            <i data-lucide="plus" class="w-6 h-6 transition-transform duration-300 icon-indicator"></i>
+                        </div>
+                    </button>
+                    <div class="accordion-content border-t border-gray-100 bg-gray-50">
+                        <div class="accordion-inner">
+                            <div class="p-6 md:p-8 md:pl-32 grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div>
+                                    <h4 class="text-xs font-bold uppercase tracking-widest text-cobe-accent mb-4">Module Covers</h4>
+                                    <ul class="space-y-3">
+                                        <li class="flex items-start gap-2 text-sm text-cobe-muted"><i data-lucide="arrow-right" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> Six financial metrics every business owner needs to track</li>
+                                        <li class="flex items-start gap-2 text-sm text-cobe-muted"><i data-lucide="arrow-right" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> Calculating what you need to earn to replace your corporate salary</li>
+                                        <li class="flex items-start gap-2 text-sm text-cobe-muted"><i data-lucide="arrow-right" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> Runway, savings thresholds, and income milestones</li>
+                                        <li class="flex items-start gap-2 text-sm text-cobe-muted"><i data-lucide="arrow-right" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> Pricing psychology: why Black professionals underprice</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs font-bold uppercase tracking-widest text-cobe-accent mb-4">Live Session</h4>
+                                    <ul class="space-y-3">
+                                        <li class="flex items-start gap-2 text-sm text-cobe-muted"><i data-lucide="arrow-right" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> Personal financial transition audit worked through together</li>
+                                        <li class="flex items-start gap-2 text-sm text-cobe-muted"><i data-lucide="arrow-right" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> Common financial mistakes in early-stage businesses</li>
+                                        <li class="flex items-start gap-2 text-sm text-cobe-muted"><i data-lucide="arrow-right" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> Q&A on pricing, tax, and financial structure</li>
+                                    </ul>
+                                </div>
+                                <div class="md:col-span-2 bg-cobe-accent/10 border-l-4 border-cobe-accent p-4 rounded-r-lg">
+                                    <span class="text-[10px] font-bold uppercase tracking-widest text-cobe-accent block mb-1">Week 4 Deliverable</span>
+                                    <p class="text-sm text-cobe-black font-medium">Your personal financial transition plan: monthly expenses, target income, minimum viable revenue, and your break-even point.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Week 5 -->
+                <div class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+                    <button class="w-full flex items-stretch text-left hover:bg-gray-50 transition-colors focus:outline-none" onclick="toggleAccordion(this)">
+                        <div class="bg-cobe-black text-cobe-accent p-6 flex flex-col justify-center items-center shrink-0 min-w-[100px]">
+                            <span class="text-[10px] font-bold uppercase tracking-widest mb-1">Week</span>
+                            <span class="font-serif text-3xl font-bold leading-none">05</span>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col justify-center border-l border-gray-200">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-cobe-rust mb-1.5">Known for the Right Thing by the Right People</span>
+                            <h3 class="font-serif text-xl font-bold text-cobe-black">Positioning and Visibility</h3>
+                        </div>
+                        <div class="p-6 flex items-center justify-center text-cobe-accent">
+                            <i data-lucide="plus" class="w-6 h-6 transition-transform duration-300 icon-indicator"></i>
+                        </div>
+                    </button>
+                    <div class="accordion-content border-t border-gray-100 bg-gray-50">
+                        <div class="accordion-inner">
+                            <div class="p-6 md:p-8 md:pl-32 grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div>
+                                    <h4 class="text-xs font-bold uppercase tracking-widest text-cobe-accent mb-4">Module Covers</h4>
+                                    <ul class="space-y-3">
+                                        <li class="flex items-start gap-2 text-sm text-cobe-muted"><i data-lucide="arrow-right" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> What positioning means and why most get it wrong</li>
+                                        <li class="flex items-start gap-2 text-sm text-cobe-muted"><i data-lucide="arrow-right" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> Establishing authority without waiting until you feel ready</li>
+                                        <li class="flex items-start gap-2 text-sm text-cobe-muted"><i data-lucide="arrow-right" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> Showing up in your own voice without performing</li>
+                                        <li class="flex items-start gap-2 text-sm text-cobe-muted"><i data-lucide="arrow-right" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> LinkedIn, speaking, and community as visibility channels</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs font-bold uppercase tracking-widest text-cobe-accent mb-4">Live Session</h4>
+                                    <ul class="space-y-3">
+                                        <li class="flex items-start gap-2 text-sm text-cobe-muted"><i data-lucide="arrow-right" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> Positioning statement workshop</li>
+                                        <li class="flex items-start gap-2 text-sm text-cobe-muted"><i data-lucide="arrow-right" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> Content planning: what to talk about, format, frequency</li>
+                                        <li class="flex items-start gap-2 text-sm text-cobe-muted"><i data-lucide="arrow-right" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> Using research-backed expertise as a visibility asset</li>
+                                    </ul>
+                                </div>
+                                <div class="md:col-span-2 bg-cobe-accent/10 border-l-4 border-cobe-accent p-4 rounded-r-lg">
+                                    <span class="text-[10px] font-bold uppercase tracking-widest text-cobe-accent block mb-1">Week 5 Deliverable</span>
+                                    <p class="text-sm text-cobe-black font-medium">A clear positioning statement and four weeks of planned content across your chosen channels.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Week 6 -->
+                <div class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+                    <button class="w-full flex items-stretch text-left hover:bg-gray-50 transition-colors focus:outline-none" onclick="toggleAccordion(this)">
+                        <div class="bg-cobe-black text-cobe-accent p-6 flex flex-col justify-center items-center shrink-0 min-w-[100px]">
+                            <span class="text-[10px] font-bold uppercase tracking-widest mb-1">Week</span>
+                            <span class="font-serif text-3xl font-bold leading-none">06</span>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col justify-center border-l border-gray-200">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-cobe-rust mb-1.5">From Programme to Momentum</span>
+                            <h3 class="font-serif text-xl font-bold text-cobe-black">Your 90-Day Plan and What Comes Next</h3>
+                        </div>
+                        <div class="p-6 flex items-center justify-center text-cobe-accent">
+                            <i data-lucide="plus" class="w-6 h-6 transition-transform duration-300 icon-indicator"></i>
+                        </div>
+                    </button>
+                    <div class="accordion-content border-t border-gray-100 bg-gray-50">
+                        <div class="accordion-inner">
+                            <div class="p-6 md:p-8 md:pl-32 grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div>
+                                    <h4 class="text-xs font-bold uppercase tracking-widest text-cobe-accent mb-4">Module Covers</h4>
+                                    <ul class="space-y-3">
+                                        <li class="flex items-start gap-2 text-sm text-cobe-muted"><i data-lucide="arrow-right" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> How to structure a 90-day plan that is ambitious and realistic</li>
+                                        <li class="flex items-start gap-2 text-sm text-cobe-muted"><i data-lucide="arrow-right" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> Setting revenue milestones and the activities that generate them</li>
+                                        <li class="flex items-start gap-2 text-sm text-cobe-muted"><i data-lucide="arrow-right" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> Building habits and systems that sustain a business</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs font-bold uppercase tracking-widest text-cobe-accent mb-4">Live Session</h4>
+                                    <ul class="space-y-3">
+                                        <li class="flex items-start gap-2 text-sm text-cobe-muted"><i data-lucide="arrow-right" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> 90-day plan presentations — each participant shares</li>
+                                        <li class="flex items-start gap-2 text-sm text-cobe-muted"><i data-lucide="arrow-right" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> Celebrating and acknowledging what the group has built</li>
+                                        <li class="flex items-start gap-2 text-sm text-cobe-muted"><i data-lucide="arrow-right" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> Next steps into the COBE Community</li>
+                                    </ul>
+                                </div>
+                                <div class="md:col-span-2 bg-cobe-accent/10 border-l-4 border-cobe-accent p-4 rounded-r-lg">
+                                    <span class="text-[10px] font-bold uppercase tracking-widest text-cobe-accent block mb-1">Week 6 Deliverable</span>
+                                    <p class="text-sm text-cobe-black font-medium">A complete 90-day business plan with weekly activity targets, revenue milestones, and the three most important actions you will take in the first 30 days.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS SECTION -->
+    <section class="py-24 bg-white border-y border-gray-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start reveal">
+            <div>
+                <div class="inline-flex items-center gap-3 mb-4">
+                    <span class="w-6 h-[1.5px] bg-cobe-accent block"></span>
+                    <span class="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-cobe-accent">How the Programme Works</span>
+                </div>
+                <h2 class="font-serif text-3xl md:text-5xl font-bold text-cobe-black mb-6 leading-tight">
+                    Structured enough to produce results. <br><em class="text-cobe-rust font-light italic">Flexible enough for a full-time job.</em>
+                </h2>
+                <p class="text-cobe-muted text-base leading-relaxed mb-8">
+                    The programme is designed to be completed alongside full-time employment. Every week is structured around one pre-recorded module, one live group session, and one workbook exercise. Four to five hours per week. Manageable.
+                </p>
+                <ul class="space-y-6">
+                    <li class="flex items-start gap-4">
+                        <div class="w-8 h-8 rounded bg-cobe-black flex items-center justify-center shrink-0 mt-1 shadow-sm">
+                            <span class="text-[10px] font-bold text-cobe-accent">01</span>
+                        </div>
+                        <p class="text-sm text-cobe-muted leading-relaxed m-0"><strong class="text-cobe-black">A pre-recorded module</strong> opens each week. Work through it at your own pace before the live session.</p>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <div class="w-8 h-8 rounded bg-cobe-black flex items-center justify-center shrink-0 mt-1 shadow-sm">
+                            <span class="text-[10px] font-bold text-cobe-accent">02</span>
+                        </div>
+                        <p class="text-sm text-cobe-muted leading-relaxed m-0"><strong class="text-cobe-black">A 90-minute live group session</strong> via Zoom every week. Direct facilitation from Natasha. Real-time Q&A.</p>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <div class="w-8 h-8 rounded bg-cobe-black flex items-center justify-center shrink-0 mt-1 shadow-sm">
+                            <span class="text-[10px] font-bold text-cobe-accent">03</span>
+                        </div>
+                        <p class="text-sm text-cobe-muted leading-relaxed m-0"><strong class="text-cobe-black">A detailed workbook</strong> for each week with exercises and frameworks that produce the week's deliverable.</p>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <div class="w-8 h-8 rounded bg-cobe-black flex items-center justify-center shrink-0 mt-1 shadow-sm">
+                            <span class="text-[10px] font-bold text-cobe-accent">04</span>
+                        </div>
+                        <p class="text-sm text-cobe-muted leading-relaxed m-0"><strong class="text-cobe-black">A private community space</strong> for peer connection, questions, and accountability between sessions.</p>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-[1px] bg-gray-200 border border-gray-200 shadow-lg rounded-xl overflow-hidden">
+                <div class="bg-cobe-light p-6 md:p-8 text-center flex flex-col justify-center">
+                    <span class="font-serif text-4xl font-bold text-cobe-black leading-none mb-2 block">4–5</span>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-cobe-muted">Hours per week</span>
+                </div>
+                <div class="bg-cobe-light p-6 md:p-8 text-center flex flex-col justify-center">
+                    <span class="font-serif text-4xl font-bold text-cobe-black leading-none mb-2 block">90m</span>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-cobe-muted">Live weekly session</span>
+                </div>
+                <div class="bg-cobe-light p-6 md:p-8 text-center flex flex-col justify-center">
+                    <span class="font-serif text-4xl font-bold text-cobe-black leading-none mb-2 block">6</span>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-cobe-muted">Workbooks included</span>
+                </div>
+                <div class="bg-cobe-light p-6 md:p-8 text-center flex flex-col justify-center">
+                    <span class="font-serif text-4xl font-bold text-cobe-black leading-none mb-2 block">24h</span>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-cobe-muted">Recording turnaround</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INVESTMENT SECTION -->
+    <section id="apply" class="py-24 bg-cobe-black text-white relative overflow-hidden">
+        <div class="absolute -right-40 -top-40 w-96 h-96 bg-cobe-rust/20 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10 reveal">
+            
+            <div>
+                <div class="inline-flex items-center gap-3 mb-4">
+                    <span class="w-6 h-[1.5px] bg-cobe-accent block"></span>
+                    <span class="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-cobe-accent">The Investment</span>
+                </div>
+                <h2 class="font-serif text-3xl md:text-5xl font-bold text-cobe-cream mb-6">
+                    Everything you need to build what <em class="text-cobe-accent font-light italic">comes next.</em>
+                </h2>
+                <p class="text-gray-300 text-base leading-relaxed mb-8">
+                    The Corporate Exodus Programme Collective is priced to reflect the value of what you leave with — a complete business plan, a peer cohort, and a financial foundation — rather than the cost of the sessions.
+                </p>
+                <ul class="space-y-3">
+                    <li class="flex items-start gap-3 text-sm text-gray-300"><i data-lucide="check" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> Six pre-recorded weekly modules</li>
+                    <li class="flex items-start gap-3 text-sm text-gray-300"><i data-lucide="check" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> Six live 90-minute group sessions via Zoom</li>
+                    <li class="flex items-start gap-3 text-sm text-gray-300"><i data-lucide="check" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> Six detailed workbooks with exercises</li>
+                    <li class="flex items-start gap-3 text-sm text-gray-300"><i data-lucide="check" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> Private community space</li>
+                    <li class="flex items-start gap-3 text-sm text-gray-300"><i data-lucide="check" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> Access to the COBE Community</li>
+                </ul>
+            </div>
+
+            <div class="bg-white/5 border border-white/10 p-8 md:p-12 rounded-2xl backdrop-blur-sm text-center">
+                <span class="block text-cobe-cream/50 text-sm mb-2">Full programme investment</span>
+                <span class="font-serif text-6xl md:text-7xl font-bold text-cobe-cream block mb-6">£750</span>
+                
+                <div class="bg-black/20 border border-white/5 p-4 rounded-lg mb-8">
+                    <p class="text-xs text-gray-400">Payment plans available on request. Contact natasha@costofblackexcellence.com to discuss.</p>
+                </div>
+                
+                <a href="mailto:natasha@costofblackexcellence.com?subject=Corporate Exodus Programme Application" class="inline-flex justify-center items-center px-8 py-4 bg-cobe-rust text-white text-sm font-bold uppercase tracking-widest rounded-lg hover:bg-[#7A3224] transition-colors w-full shadow-lg mb-4">
+                    Apply for the Next Cohort
+                </a>
+                
+                <p class="text-xs text-cobe-accent/80 text-left leading-relaxed">
+                    <i data-lucide="info" class="w-3 h-3 inline mr-1 -mt-0.5"></i> COBE Community Members and Founding Partners receive £200 off. Discount applied on confirmation of membership.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ABOUT NATASHA SECTION -->
+    <section class="py-24 bg-cobe-light border-b border-gray-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start reveal">
+            
+            <!-- Photo area -->
+            <div class="lg:col-span-4 relative group">
+                <div class="aspect-[3/4] bg-cobe-dark rounded-xl overflow-hidden relative shadow-lg">
+                    <!-- Placeholder -->
+                    <div class="absolute inset-0 flex flex-col items-center justify-center gap-2 p-6 text-center border-2 border-dashed border-gray-600 m-2 rounded-lg">
+                        <i data-lucide="image" class="w-8 h-8 text-gray-500"></i>
+                        <span class="text-[10px] font-bold tracking-widest uppercase text-gray-400">Natasha's Photo</span>
+                    </div>
+                    <!-- The color accent bar at bottom -->
+                    <div class="absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r from-cobe-rust to-cobe-accent"></div>
+                </div>
+            </div>
+
+            <!-- Content area -->
+            <div class="lg:col-span-8">
+                <div class="inline-flex items-center gap-3 mb-4">
+                    <span class="w-6 h-[1.5px] bg-cobe-accent block"></span>
+                    <span class="text-[0.65rem] font-bold tracking-[0.18em] uppercase text-cobe-accent">Your Facilitator</span>
+                </div>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-cobe-black mb-6">
+                    Built by someone who has <em class="text-cobe-rust font-light italic">navigated it herself.</em>
+                </h2>
+                <div class="text-cobe-muted text-base leading-relaxed space-y-5 mb-8">
+                    <p>Natasha Williams is the Founder and Research Director of The Cost of Black Excellence Research Institute and the creator of the Excellence Tax™ framework. Her research draws on survey data from more than 1,000 Black professionals across the UK, US, Canada, and Australia.</p>
+                    <p>She has built and run businesses across more than two decades, including 14 years as Managing Director of Shape Surveyors. She has navigated the financial realities of self-employment, managed the specific challenges of building as a Black woman in industries that were not designed for her presence, and understands from the inside what translating undervalued expertise into a viable business actually requires.</p>
+                    <p>She brings all of that into the Corporate Exodus Programme directly. Not as theory. As lived, tested, financially grounded experience.</p>
+                </div>
+                
+                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <li class="flex items-start gap-3 text-sm text-cobe-black font-medium"><i data-lucide="check" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> MA in Planning and Sustainability</li>
+                    <li class="flex items-start gap-3 text-sm text-cobe-black font-medium"><i data-lucide="check" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> OTHM L7 Organisational Psychology</li>
+                    <li class="flex items-start gap-3 text-sm text-cobe-black font-medium"><i data-lucide="check" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> Somatic Trauma Informed Coaching</li>
+                    <li class="flex items-start gap-3 text-sm text-cobe-black font-medium"><i data-lucide="check" class="w-4 h-4 text-cobe-accent shrink-0 mt-0.5"></i> 14 years Managing Director</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="py-24 bg-cobe-cream">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 reveal">
+                <span class="text-cobe-accent font-bold tracking-[0.2em] uppercase text-[11px] mb-4 block">Common Questions</span>
+                <h2 class="font-serif text-3xl md:text-5xl font-bold text-cobe-black mb-4">Questions about the <em class="text-cobe-rust font-light italic">programme.</em></h2>
+                <p class="text-cobe-muted">If your question is not here, email natasha@costofblackexcellence.com.</p>
+            </div>
+
+            <div class="space-y-3 reveal">
+                <!-- FAQ 1 -->
+                <div class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+                    <button class="w-full px-6 py-5 flex items-center justify-between bg-white hover:bg-gray-50 transition-colors focus:outline-none group" onclick="toggleFaq(this)">
+                        <h3 class="font-serif text-lg font-bold text-cobe-black text-left">Do I need to have already left my job to join?</h3>
+                        <i data-lucide="plus" class="w-5 h-5 text-cobe-accent transition-transform duration-300 faq-icon shrink-0 ml-4 group-hover:text-cobe-black"></i>
+                    </button>
+                    <div class="accordion-content bg-gray-50 border-t border-gray-100">
+                        <div class="accordion-inner">
+                            <p class="p-6 text-sm text-cobe-muted leading-relaxed m-0">The programme works for both people still in corporate employment planning their exit, and people who have already left and are in the early building stage. The financial planning week (Week 4) addresses both situations directly, including how to plan the transition whilst still employed and how to build financial momentum if you have already left.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+                    <button class="w-full px-6 py-5 flex items-center justify-between bg-white hover:bg-gray-50 transition-colors focus:outline-none group" onclick="toggleFaq(this)">
+                        <h3 class="font-serif text-lg font-bold text-cobe-black text-left">How much time do I need each week?</h3>
+                        <i data-lucide="plus" class="w-5 h-5 text-cobe-accent transition-transform duration-300 faq-icon shrink-0 ml-4 group-hover:text-cobe-black"></i>
+                    </button>
+                    <div class="accordion-content bg-gray-50 border-t border-gray-100">
+                        <div class="accordion-inner">
+                            <p class="p-6 text-sm text-cobe-muted leading-relaxed m-0">Expect to invest four to five hours per week. That covers the pre-recorded module (60 to 90 minutes), the workbook exercise (60 to 90 minutes), and the live session (90 minutes). The programme is designed to be completed alongside full-time work with that time commitment in mind.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+                    <button class="w-full px-6 py-5 flex items-center justify-between bg-white hover:bg-gray-50 transition-colors focus:outline-none group" onclick="toggleFaq(this)">
+                        <h3 class="font-serif text-lg font-bold text-cobe-black text-left">What if I cannot attend the live sessions?</h3>
+                        <i data-lucide="plus" class="w-5 h-5 text-cobe-accent transition-transform duration-300 faq-icon shrink-0 ml-4 group-hover:text-cobe-black"></i>
+                    </button>
+                    <div class="accordion-content bg-gray-50 border-t border-gray-100">
+                        <div class="accordion-inner">
+                            <p class="p-6 text-sm text-cobe-muted leading-relaxed m-0">All sessions are recorded and made available within 24 hours. If you cannot attend live, submit your questions in advance and Natasha will address them during the session. The programme is designed with working professionals in mind — missing the occasional live session does not prevent you from getting full value from the programme.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+                    <button class="w-full px-6 py-5 flex items-center justify-between bg-white hover:bg-gray-50 transition-colors focus:outline-none group" onclick="toggleFaq(this)">
+                        <h3 class="font-serif text-lg font-bold text-cobe-black text-left">What if I am not yet sure what kind of business I want to build?</h3>
+                        <i data-lucide="plus" class="w-5 h-5 text-cobe-accent transition-transform duration-300 faq-icon shrink-0 ml-4 group-hover:text-cobe-black"></i>
+                    </button>
+                    <div class="accordion-content bg-gray-50 border-t border-gray-100">
+                        <div class="accordion-inner">
+                            <p class="p-6 text-sm text-cobe-muted leading-relaxed m-0">Week one addresses exactly that. Many participants arrive uncertain and leave with a defined direction. Arriving with an open mind and genuine corporate expertise serves you better than arriving with a fixed plan that has not yet been tested against the questions the programme will ask of it.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+                    <button class="w-full px-6 py-5 flex items-center justify-between bg-white hover:bg-gray-50 transition-colors focus:outline-none group" onclick="toggleFaq(this)">
+                        <h3 class="font-serif text-lg font-bold text-cobe-black text-left">What happens after the six weeks?</h3>
+                        <i data-lucide="plus" class="w-5 h-5 text-cobe-accent transition-transform duration-300 faq-icon shrink-0 ml-4 group-hover:text-cobe-black"></i>
+                    </button>
+                    <div class="accordion-content bg-gray-50 border-t border-gray-100">
+                        <div class="accordion-inner">
+                            <p class="p-6 text-sm text-cobe-muted leading-relaxed m-0">Participants continue in the COBE Community, where the peer connections and conversations from the programme carry on. Those who want more intensive, personalised support can explore the Corporate Exodus Programme Executive tier, which offers one-to-one support with Natasha directly. The peer cohort also continues as a network beyond the formal programme.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLOSING CTA -->
+    <section class="py-24 bg-cobe-rust text-white text-center relative overflow-hidden closing-pattern">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 reveal">
+            <h2 class="font-serif text-4xl md:text-5xl font-bold text-cobe-cream mb-6">
+                Stop planning your exit. <br><em class="text-cobe-accent font-light italic">Start building what comes next.</em>
+            </h2>
+            <p class="text-cobe-cream/80 text-lg mb-10 max-w-xl mx-auto">
+                The next cohort of the Corporate Exodus Programme Collective is forming now. Six weeks. A peer cohort who understand the terrain. A complete 90-day plan.
+            </p>
+            <a href="mailto:natasha@costofblackexcellence.com?subject=Corporate Exodus Programme Application" class="inline-flex justify-center items-center px-10 py-4 bg-cobe-cream text-cobe-rust text-sm font-bold uppercase tracking-widest rounded-lg hover:bg-white transition-colors shadow-lg">
+                Apply for the Next Cohort &rarr;
+            </a>
+            <p class="text-xs text-cobe-cream/50 mt-6">Questions before applying? Email natasha@costofblackexcellence.com. Payment plans available.</p>
+        </div>
+    </section>
+
+    <!-- Master Footer -->
+    <footer class="bg-cobe-dark text-white pt-16 pb-8 border-t border-white/10 mt-auto relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12 border-b border-white/10 pb-12">
+                
+                <!-- Brand & Socials -->
+                <div class="lg:col-span-1">
+                    <a href="index.html" class="inline-flex items-center gap-3 mb-4 group">
+                        <img src="assets/images/C.png" alt="COBE Logo" class="h-8 md:h-10 w-auto object-contain transition-transform group-hover:scale-105">
+                        <div class="flex flex-col justify-center">
+                            <div class="font-serif font-bold text-xl md:text-2xl tracking-tight text-white group-hover:text-cobe-accent transition-colors leading-none">
+                                The Cost of Black Excellence<span class="text-cobe-accent group-hover:text-white transition-colors">.</span>
+                            </div>
+                            <div class="font-sans font-medium text-[0.55rem] md:text-[0.65rem] tracking-[0.3em] text-gray-400 mt-1 pl-0.5 opacity-80">
+                                RESEARCH INSTITUTE
+                            </div>
+                        </div>
+                    </a>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                        Documenting workplace extraction. Building liberation infrastructure for Black and BAME professionals.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/in/nw-cobe/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-cobe-accent hover:text-cobe-black transition-all" aria-label="LinkedIn">
+                            <i data-lucide="linkedin" class="h-5 w-5"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@NatashaWilliamsUK" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-cobe-accent hover:text-cobe-black transition-all" aria-label="YouTube">
+                            <i data-lucide="youtube" class="h-5 w-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-cobe-accent hover:text-cobe-black transition-all group relative" aria-label="Podcast">
+                            <i data-lucide="mic" class="h-5 w-5"></i>
+                            <span class="absolute -top-10 left-1/2 -translate-x-1/2 bg-white text-cobe-black text-xs font-bold px-2 py-1 rounded opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all whitespace-nowrap">Coming Soon</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Research & Data -->
+                <div>
+                    <h3 class="font-bold text-white tracking-wider uppercase text-sm mb-4">Research & Data</h3>
+                    <ul class="space-y-3">
+                        <li><a href="research.html" class="text-gray-400 hover:text-cobe-accent text-sm transition-colors">Core Findings</a></li>
+                        <li><a href="data-methodology.html" class="text-gray-400 hover:text-cobe-accent text-sm transition-colors">Data & Methodology</a></li>
+                        <li><a href="publications.html" class="text-gray-400 hover:text-cobe-accent text-sm transition-colors">Publications</a></li>
+                    </ul>
+                </div>
+
+                <!-- Left-aligned split column for Audit Platform & Institute -->
+                <div>
+                    <h3 class="font-bold text-white tracking-wider uppercase text-sm mb-4">Institute</h3>
+                    <ul class="space-y-3 mb-8">
+                        <li><a href="about.html" class="text-gray-400 hover:text-cobe-accent text-sm transition-colors">About the Institute</a></li>
+                        <li><a href="ethics.html" class="text-gray-400 hover:text-cobe-accent text-sm transition-colors">Governance & Ethics</a></li>
+                        <li><a href="partner.html" class="text-gray-400 hover:text-cobe-accent text-sm transition-colors">Partner With Us</a></li>
+                    </ul>
+
+                    <h3 class="font-bold text-white tracking-wider uppercase text-sm mb-4">Media & Insights</h3>
+                    <ul class="space-y-3">
+                        <li><a href="media.html" class="text-gray-400 hover:text-cobe-accent text-sm transition-colors">Press & Media</a></li>
+                        <li><a href="speaking.html" class="text-gray-400 hover:text-cobe-accent text-sm transition-colors">Corporate Speaking</a></li>
+                    </ul>
+                </div>
+
+                <!-- The Audit Platform & Subscription -->
+                <div>
+                    <h3 class="font-bold text-white tracking-wider uppercase text-sm mb-4">The Audit Platform</h3>
+                    <ul class="space-y-3 mb-8">
+                        <li><a href="audits.html" class="text-gray-400 hover:text-cobe-accent text-sm transition-colors">Organisational Diagnostics</a></li>
+                        <li><a href="quiz.html" class="text-gray-400 hover:text-cobe-accent text-sm transition-colors">The Assessment</a></li>
+                    </ul>
+
+                    <h3 class="font-bold text-white tracking-wider uppercase text-sm mb-4">Stay Updated</h3>
+                    <form action="https://app.kit.com/forms/8930871/subscriptions" method="POST" class="flex flex-col gap-2">
+                        <input type="email" name="email_address" placeholder="Professional Email" required class="bg-white/5 border border-white/10 text-white rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-cobe-accent transition-colors w-full">
+                        <button type="submit" class="bg-cobe-accent text-cobe-black font-bold rounded-lg px-4 py-2.5 text-sm hover:bg-white transition-colors w-full">Subscribe</button>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- Legal & Copyright -->
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end text-xs text-gray-500 gap-6 pt-4">
+                <div class="space-y-2">
+                    <p>&copy; 2026 The Cost of Black Excellence Research Institute. All rights reserved.</p>
+                    <p>The Cost of Black Excellence Ltd is registered in England and Wales. Company No. 16147986.</p>
+                    <p>Registered Office: Birmingham.</p>
+                </div>
+                <div class="flex flex-wrap gap-4 md:space-x-6">
+                    <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="terms.html" class="hover:text-white transition-colors">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Icons
+            if (typeof lucide !== 'undefined') { lucide.createIcons(); }
+
+            // Scroll Animations (Navbar & Progress)
+            window.addEventListener('scroll', () => {
+                const nav = document.getElementById('navbar');
+                const progressEl = document.getElementById('progress');
+                const d = document.documentElement;
+
+                if (nav) {
+                    if (window.scrollY > 10) {
+                        nav.classList.add('shadow-sm', 'bg-white/95');
+                        nav.classList.remove('bg-white/90');
+                    } else {
+                        nav.classList.remove('shadow-sm', 'bg-white/95');
+                        nav.classList.add('bg-white/90');
+                    }
+                }
+
+                if(progressEl) {
+                    progressEl.style.width = (d.scrollTop / (d.scrollHeight - d.clientHeight) * 100) + '%';
+                }
+            });
+
+            // Mobile Menu Toggle
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            if (btn && menu) {
+                btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
+            }
+
+            // Scroll Reveal Observer
+            const reveals = document.querySelectorAll('.reveal');
+            if (reveals.length > 0) {
+                const io = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(e => { 
+                        if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } 
+                    });
+                }, { threshold: 0.1 });
+                reveals.forEach(el => io.observe(el));
+            }
+        });
+
+        // Accordion Toggle Function
+        function toggleAccordion(btn) {
+            // Find the closest wrapper
+            const wrapper = btn.closest('.bg-white');
+            const content = wrapper.querySelector('.accordion-content');
+            const icon = btn.querySelector('.icon-indicator');
+            
+            const isOpen = content.classList.contains('is-open');
+
+            // Close all others in the same section (Curriculum)
+            const allContents = document.querySelectorAll('#curriculum .accordion-content');
+            const allIcons = document.querySelectorAll('#curriculum .icon-indicator');
+            
+            allContents.forEach(c => c.classList.remove('is-open'));
+            allIcons.forEach(i => i.classList.remove('rotate-45'));
+
+            // Open this one if it wasn't already open
+            if (!isOpen) {
+                content.classList.add('is-open');
+                icon.classList.add('rotate-45');
+            }
+        }
+
+        // FAQ Toggle Function
+        function toggleFaq(btn) {
+            const wrapper = btn.closest('.bg-white');
+            const content = wrapper.querySelector('.accordion-content');
+            const icon = btn.querySelector('.faq-icon');
+            
+            const isOpen = content.classList.contains('is-open');
+
+            // Close all others
+            const allContents = document.querySelectorAll('.faq .accordion-content');
+            const allIcons = document.querySelectorAll('.faq .faq-icon');
+            
+            allContents.forEach(c => c.classList.remove('is-open'));
+            allIcons.forEach(i => i.classList.remove('rotate-45'));
+
+            // Open this one if it wasn't already open
+            if (!isOpen) {
+                content.classList.add('is-open');
+                icon.classList.add('rotate-45');
+            }
+        }
+    </script>
+</body>
+</html>
