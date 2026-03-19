@@ -73,6 +73,45 @@
 </head>
 <body class="antialiased font-sans text-cobe-black bg-cobe-light flex flex-col min-h-screen">
 
+
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        cobe: {
+                            black: '#1A1209',   /* Deep Brown */
+                            dark: '#2D2416',    /* Charcoal */
+                            accent: '#C8962A',  /* Rich Gold */
+                            light: '#FAF7F2',   /* Pale Cream */
+                            muted: '#5C4A30',   /* Mid Brown */
+                            rust: '#8B3A2A',    /* Rust */
+                            cream: '#F5F0E8'    /* Cream */
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        .fade-in-up { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; transform: translateY(20px); }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+        
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .hero-pattern { background-color: #1A1209; background-image: radial-gradient(#2D2416 1px, transparent 1px); background-size: 32px 32px; }
+    </style>
+</head>
+<body class="antialiased font-sans flex flex-col min-h-screen bg-cobe-light text-cobe-black">
+
     <!-- Master Navigation -->
     <nav id="navbar" class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -183,7 +222,7 @@
                     </div>
 
                     <div class="flex items-center pl-6 border-l border-gray-200 space-x-4">
-                        <a href="contact.html" class="inline-flex items-center justify-center px-6 py-2.5 rounded-full text-sm font-bold text-white bg-cobe-black hover:bg-cobe-dark transition-all shadow-sm">Contact Us</a>
+                        <a href="contact.html" class="inline-flex items-center justify-center px-6 py-2.5 rounded-full text-sm font-bold text-cobe-black bg-cobe-accent hover:bg-white transition-all shadow-md">Contact Us</a>
                     </div>
                 </div>
 
@@ -199,6 +238,7 @@
         <!-- Mobile Menu Panel -->
         <div class="lg:hidden hidden bg-white border-t border-gray-100 max-h-[80vh] overflow-y-auto" id="mobile-menu">
             <div class="px-4 py-6 space-y-6">
+                <!-- Research & Data -->
                 <div>
                     <p class="px-3 text-xs font-bold text-cobe-accent uppercase tracking-wider mb-2">Research & Data</p>
                     <div class="space-y-1">
@@ -207,9 +247,9 @@
                         <a href="publications.html" class="block px-3 py-2 rounded-md text-base font-bold text-cobe-black bg-gray-50">Publications</a>
                     </div>
                 </div>
-                <!-- ... other mobile menu items ... -->
+                <!-- Other mobile menu items... -->
                 <div class="pt-4 border-t border-gray-100 flex flex-col gap-3">
-                    <a href="contact.html" class="block w-full text-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-cobe-black hover:bg-cobe-dark">Contact Us</a>
+                    <a href="contact.html" class="block w-full text-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-cobe-black bg-cobe-accent hover:bg-white shadow-md">Contact Us</a>
                 </div>
             </div>
         </div>
