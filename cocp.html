@@ -595,7 +595,7 @@
         </div>
     </section>
 
-    <!-- ══════════════════ REGISTER FORM ══════════════════ -->
+ <!-- ══════════════════ REGISTER FORM (WITH WEB3FORMS INTEGRATION) ══════════════════ -->
     <section id="register" class="py-24 bg-cobe-black text-white relative overflow-hidden">
         <div class="absolute left-0 top-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-cobe-accent/10 via-transparent to-transparent pointer-events-none"></div>
         <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 reveal text-center">
@@ -606,40 +606,41 @@
                 We will send you the full qualification details, pricing, and next steps. All responses are kept in confidence and used as research input only.
             </p>
 
-            <div id="form-wrap" class="bg-white/5 p-8 md:p-10 rounded-2xl border border-white/10 backdrop-blur-sm text-left">
+            <!-- THIS IS THE WEB3FORMS REPLACEMENT SNIPPET -->
+            <form id="form-wrap" onsubmit="handleSubmit(event)" class="bg-white/5 p-8 md:p-10 rounded-2xl border border-white/10 backdrop-blur-sm text-left">
                 <div class="space-y-6">
                     <div>
                         <label class="block text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2">Full Name</label>
-                        <input type="text" id="f-name" class="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white focus:outline-none focus:border-cobe-accent transition-colors" placeholder="Your name">
+                        <input type="text" id="f-name" required class="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white focus:outline-none focus:border-cobe-accent transition-colors" placeholder="Your name">
                     </div>
                     <div>
                         <label class="block text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2">Email Address</label>
-                        <input type="email" id="f-email" class="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white focus:outline-none focus:border-cobe-accent transition-colors" placeholder="your@email.com">
+                        <input type="email" id="f-email" required class="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white focus:outline-none focus:border-cobe-accent transition-colors" placeholder="your@email.com">
                     </div>
                     <div>
                         <label class="block text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2">Your role or professional background</label>
-                        <select id="f-role" title="Your role or professional background" class="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white focus:outline-none focus:border-cobe-accent transition-colors form-select">
+                        <select id="f-role" required title="Your role or professional background" class="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white focus:outline-none focus:border-cobe-accent transition-colors form-select">
                             <option value="" disabled selected>Select the closest match</option>
-                            <option>HR Director or People Leader</option>
-                            <option>DEI Professional or Consultant</option>
-                            <option>Change Management Professional or Consultant</option>
-                            <option>Organisational Development Professional</option>
-                            <option>Black Professional moving into consulting</option>
-                            <option>Other</option>
+                            <option value="HR Director or People Leader">HR Director or People Leader</option>
+                            <option value="DEI Professional or Consultant">DEI Professional or Consultant</option>
+                            <option value="Change Management Professional or Consultant">Change Management Professional or Consultant</option>
+                            <option value="Organisational Development Professional">Organisational Development Professional</option>
+                            <option value="Black Professional moving into consulting">Black Professional moving into consulting</option>
+                            <option value="Other">Other</option>
                         </select>
                     </div>
                     <div>
                         <label class="block text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2">Which option interests you?</label>
-                        <select id="f-track" aria-label="Which option interests you?" class="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white focus:outline-none focus:border-cobe-accent transition-colors form-select">
+                        <select id="f-track" required title="Which option interests you?" class="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white focus:outline-none focus:border-cobe-accent transition-colors form-select">
                             <option value="" disabled selected>Select an option</option>
-                            <option>Full programme (6 to 9 months)</option>
-                            <option>5-day intensive fast-track</option>
-                            <option>Pilot study partnership (organisation)</option>
-                            <option>Not sure yet</option>
+                            <option value="Full programme (6 to 9 months)">Full programme (6 to 9 months)</option>
+                            <option value="5-day intensive fast-track">5-day intensive fast-track</option>
+                            <option value="Pilot study partnership (organisation)">Pilot study partnership (organisation)</option>
+                            <option value="Not sure yet">Not sure yet</option>
                         </select>
                     </div>
                     
-                    <button onclick="handleSubmit()" class="w-full py-4 bg-cobe-accent text-cobe-black text-sm font-bold uppercase tracking-widest rounded hover:bg-white transition-colors mt-4">
+                    <button type="submit" id="submit-btn" class="w-full py-4 bg-cobe-accent text-cobe-black text-sm font-bold uppercase tracking-widest rounded hover:bg-white transition-colors mt-4 flex items-center justify-center">
                         Register My Interest &rarr;
                     </button>
                     
@@ -647,7 +648,8 @@
                         We will not share your details with any third party. All information is used for research and qualification development purposes only.
                     </p>
                 </div>
-            </div>
+            </form>
+            <!-- END WEB3FORMS SNIPPET -->
 
             <!-- Success Message -->
             <div id="success-msg" class="hidden bg-cobe-accent/10 border border-cobe-accent/30 p-12 rounded-2xl text-center">
