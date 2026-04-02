@@ -38,7 +38,7 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- NEW TAILWIND CONFIG (Maps your old classes to the new brand palette) -->
+
     <script>
         tailwind.config = {
             theme: {
@@ -49,13 +49,13 @@
                     },
                     colors: {
                         cobe: {
-                            black: '#1A1209',   /* The new Deep Brown */
-                            dark: '#2D2416',    /* The new Charcoal */
-                            accent: '#C8962A',  /* The richer Gold */
-                            light: '#FAF7F2',   /* The Pale Cream background */
-                            muted: '#5C4A30',   /* The new Mid Brown */
-                            rust: '#8B3A2A',    /* Added Rust for specific highlights */
-                            cream: '#F5F0E8'    /* Added Cream for cards */
+                            black: '#1A1209',
+                            dark: '#2D2416',
+                            accent: '#C8962A',
+                            light: '#FAF7F2',
+                            muted: '#5C4A30',
+                            rust: '#8B3A2A',
+                            cream: '#F5F0E8'
                         }
                     }
                 }
@@ -107,13 +107,13 @@
 </head>
 <body class="antialiased font-sans flex flex-col min-h-screen bg-cobe-light text-cobe-black">
 
-    <!-- Master Navigation -->
+  <!-- FULL MASTER NAVIGATION -->
     <nav id="navbar" class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20">
                 <div class="flex items-center">
                     <a href="index.html" class="flex-shrink-0 inline-flex items-center gap-3 group">
-                        <img src="assets/images/C.png" alt="COBE Logo" class="h-8 md:h-10 w-auto object-contain transition-transform group-hover:scale-105">
+                        <img src="assets/images/C.png" alt="COBE Logo" class="h-8 md:h-10 w-auto object-contain transition-transform group-hover:scale-105" onerror="this.style.display='none'">
                         <div class="flex flex-col justify-center">
                             <div class="font-serif font-bold text-xl md:text-2xl tracking-tight text-cobe-black leading-none group-hover:text-cobe-accent transition-colors">
                                 The Cost of Black Excellence<span class="text-cobe-accent group-hover:text-cobe-black transition-colors">.</span>
@@ -128,24 +128,33 @@
                 <!-- Desktop Mega Menu -->
                 <div class="hidden lg:flex lg:items-center lg:space-x-8 h-full">
                     
-                    <!-- 1. Research & Data (Active) -->
+                    <!-- 1. Research & Data -->
                     <div class="relative group h-full flex items-center">
-                        <button class="flex items-center gap-1 text-sm font-medium text-cobe-black border-b-2 border-cobe-accent pb-1 h-full pt-1 focus:outline-none">
-                            Research & Data <i data-lucide="chevron-down" class="h-4 w-4 text-cobe-accent transition-colors"></i>
+                        <button class="flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-cobe-black transition-colors focus:outline-none">
+                            Research & Data <i data-lucide="chevron-down" class="h-4 w-4 text-gray-400 group-hover:text-cobe-accent transition-colors"></i>
                         </button>
                         <div class="absolute left-0 top-20 w-72 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                             <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-3 space-y-1">
                                 <a href="research.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
                                     <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="file-text" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
-                                    <div><p class="text-sm font-bold text-cobe-black">Core Findings</p><p class="text-xs text-gray-500 mt-0.5">Read the executive summary</p></div>
+                                    <div>
+                                        <p class="text-sm font-bold text-cobe-black">Core Findings</p>
+                                        <p class="text-xs text-gray-500 mt-0.5">Read the executive summary</p>
+                                    </div>
                                 </a>
                                 <a href="data-methodology.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
                                     <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="bar-chart-2" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
-                                    <div><p class="text-sm font-bold text-cobe-black">Data & Methodology</p><p class="text-xs text-gray-500 mt-0.5">Explore the dashboard</p></div>
+                                    <div>
+                                        <p class="text-sm font-bold text-cobe-black">Data & Methodology</p>
+                                        <p class="text-xs text-gray-500 mt-0.5">Explore the dashboard</p>
+                                    </div>
                                 </a>
-                                <a href="publications.html" class="flex items-start gap-3 p-3 rounded-xl bg-gray-50 transition-colors group/item">
-                                    <div class="bg-cobe-accent/10 p-2 rounded-lg"><i data-lucide="book-open" class="h-5 w-5 text-cobe-accent"></i></div>
-                                    <div><p class="text-sm font-bold text-cobe-black">Publications</p><p class="text-xs text-cobe-accent mt-0.5">Whitepapers & reports</p></div>
+                                <a href="publications.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
+                                    <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="book-open" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
+                                    <div>
+                                        <p class="text-sm font-bold text-cobe-black">Publications</p>
+                                        <p class="text-xs text-gray-500 mt-0.5">Whitepapers & articles</p>
+                                    </div>
                                 </a>
                             </div>
                         </div>
@@ -160,38 +169,70 @@
                             <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-3 space-y-1">
                                 <a href="audits.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
                                     <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="search" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
-                                    <div><p class="text-sm font-bold text-cobe-black">Organisational Diagnostics</p><p class="text-xs text-gray-500 mt-0.5">Corporate audit services</p></div>
+                                    <div>
+                                        <p class="text-sm font-bold text-cobe-black">Organisational Diagnostics</p>
+                                        <p class="text-xs text-gray-500 mt-0.5">Corporate audit services</p>
+                                    </div>
                                 </a>
-                                <a href="quiz.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
+                                <a href="https://score.costofblackexcellence.com" target="_blank" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
                                     <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="clipboard-check" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
-                                    <div><p class="text-sm font-bold text-cobe-black">The Assessment</p><p class="text-xs text-gray-500 mt-0.5">Calculate your extraction zone</p></div>
+                                    <div>
+                                        <p class="text-sm font-bold text-cobe-black flex items-center gap-1">The Assessment <i data-lucide="external-link" class="w-3 h-3 text-gray-400"></i></p>
+                                        <p class="text-xs text-gray-500 mt-0.5">Calculate your extraction zone</p>
+                                    </div>
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- 3. Institute -->
+                    <!-- 3. Institute (Active) -->
                     <div class="relative group h-full flex items-center">
-                        <button class="flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-cobe-black transition-colors focus:outline-none">
-                            Institute <i data-lucide="chevron-down" class="h-4 w-4 text-gray-400 group-hover:text-cobe-accent transition-colors"></i>
+                        <button class="flex items-center gap-1 text-sm font-medium pb-1 h-full pt-1 focus:outline-none">
+                            Institute <i data-lucide="chevron-down" class="h-4 w-4 text-cobe-accent"></i>
                         </button>
                         <div class="absolute left-0 top-20 w-72 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                             <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-3 space-y-1">
+                                <a href="cocp.html" class="flex items-start gap-3 p-3 rounded-xl bg-gray-50 transition-colors group/item">
+                                    <div class="bg-cobe-accent/10 p-2 rounded-lg"><i data-lucide="award" class="h-5 w-5 text-cobe-accent"></i></div>
+                                    <div>
+                                        <p class="text-sm font-bold text-cobe-black">COCP Qualification</p>
+                                        <p class="text-xs text-cobe-accent mt-0.5">Practitioner certification</p>
+                                    </div>
+                                </a>
                                 <a href="about.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
                                     <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="landmark" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
-                                    <div><p class="text-sm font-bold text-cobe-black">About the Institute</p><p class="text-xs text-gray-500 mt-0.5">Our mission & genesis</p></div>
+                                    <div>
+                                        <p class="text-sm font-bold text-cobe-black">About the Institute</p>
+                                        <p class="text-xs text-gray-500 mt-0.5">Our mission & genesis</p>
+                                    </div>
                                 </a>
                                 <a href="cobe-community.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
                                     <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="users" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
-                                    <div><p class="text-sm font-bold text-cobe-black">The COBE Community</p><p class="text-xs text-gray-500 mt-0.5">Peer support & resources</p></div>
+                                    <div>
+                                        <p class="text-sm font-bold text-cobe-black">The COBE Community</p>
+                                        <p class="text-xs text-gray-500 mt-0.5">Peer support & resources</p>
+                                    </div>
+                                </a>
+                                <a href="corporate-exodus.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
+                                    <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="door-open" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
+                                    <div>
+                                        <p class="text-sm font-bold text-cobe-black">Corporate Exodus</p>
+                                        <p class="text-xs text-gray-500 mt-0.5">6-Week Business Programme</p>
+                                    </div>
                                 </a>
                                 <a href="ethics.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
                                     <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="scale" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
-                                    <div><p class="text-sm font-bold text-cobe-black">Governance & Ethics</p><p class="text-xs text-gray-500 mt-0.5">Data security & protocols</p></div>
+                                    <div>
+                                        <p class="text-sm font-bold text-cobe-black">Governance & Ethics</p>
+                                        <p class="text-xs text-gray-500 mt-0.5">Data security & protocols</p>
+                                    </div>
                                 </a>
                                 <a href="partner.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
                                     <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="handshake" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
-                                    <div><p class="text-sm font-bold text-cobe-black">Partner With Us</p><p class="text-xs text-gray-500 mt-0.5">Corporate & academic alliances</p></div>
+                                    <div>
+                                        <p class="text-sm font-bold text-cobe-black">Partner With Us</p>
+                                        <p class="text-xs text-gray-500 mt-0.5">Corporate & academic alliances</p>
+                                    </div>
                                 </a>
                             </div>
                         </div>
@@ -206,31 +247,45 @@
                             <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-3 space-y-1">
                                 <a href="media.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
                                     <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="newspaper" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
-                                    <div><p class="text-sm font-bold text-cobe-black">Press & Media</p><p class="text-xs text-gray-500 mt-0.5">Assets & recent features</p></div>
+                                    <div>
+                                        <p class="text-sm font-bold text-cobe-black">Press & Media</p>
+                                        <p class="text-xs text-gray-500 mt-0.5">Assets & recent features</p>
+                                    </div>
                                 </a>
                                 <a href="speaking.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
                                     <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="mic" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
-                                    <div><p class="text-sm font-bold text-cobe-black">Corporate Speaking</p><p class="text-xs text-gray-500 mt-0.5">Institute Keynotes</p></div>
+                                    <div>
+                                        <p class="text-sm font-bold text-cobe-black">Corporate Speaking</p>
+                                        <p class="text-xs text-gray-500 mt-0.5">Institute Keynotes</p>
+                                    </div>
+                                </a>
+                                <a href="https://blog.costofblackexcellence.com" target="_blank" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group/item">
+                                    <div class="bg-gray-100 p-2 rounded-lg group-hover/item:bg-cobe-accent/10 transition-colors"><i data-lucide="external-link" class="h-5 w-5 text-gray-600 group-hover/item:text-cobe-accent"></i></div>
+                                    <div>
+                                        <p class="text-sm font-bold text-cobe-black">The COBE Blog</p>
+                                        <p class="text-xs text-gray-500 mt-0.5">Read our latest articles</p>
+                                    </div>
                                 </a>
                             </div>
                         </div>
                     </div>
 
                     <div class="flex items-center pl-6 border-l border-gray-200 space-x-4">
-                        <a href="contact.html" class="inline-flex items-center justify-center px-6 py-2.5 rounded-full text-sm font-bold text-cobe-black bg-cobe-accent hover:bg-white transition-all shadow-md">Contact Us</a>
+                        <a href="contact.html" class="inline-flex items-center justify-center px-6 py-2.5 rounded-full text-sm font-bold text-white bg-cobe-black hover:bg-cobe-dark transition-all shadow-sm">Contact Us</a>
                     </div>
                 </div>
 
                 <!-- Mobile menu button -->
                 <div class="flex items-center lg:hidden">
                     <button type="button" id="mobile-menu-btn" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none">
+                        <span class="sr-only">Open main menu</span>
                         <i data-lucide="menu" class="h-6 w-6"></i>
                     </button>
                 </div>
             </div>
         </div>
 
-        <!-- Mobile Menu Panel -->
+        <!-- FULL MOBILE MENU PANEL -->
         <div class="lg:hidden hidden bg-white border-t border-gray-100 max-h-[80vh] overflow-y-auto" id="mobile-menu">
             <div class="px-4 py-6 space-y-6">
                 <!-- Research & Data -->
@@ -239,12 +294,45 @@
                     <div class="space-y-1">
                         <a href="research.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Core Findings</a>
                         <a href="data-methodology.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Data & Methodology</a>
-                        <a href="publications.html" class="block px-3 py-2 rounded-md text-base font-bold text-cobe-black bg-gray-50">Publications</a>
+                        <a href="publications.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Publications</a>
                     </div>
                 </div>
-                <!-- Other mobile menu items... -->
+
+                <!-- Audit Platform -->
+                <div>
+                    <p class="px-3 text-xs font-bold text-cobe-accent uppercase tracking-wider mb-2">The Audit Platform</p>
+                    <div class="space-y-1">
+                        <a href="audits.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Organisational Diagnostics</a>
+                        <a href="https://score.costofblackexcellence.com" target="_blank" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">The Assessment <i data-lucide="external-link" class="w-3 h-3 inline"></i></a>
+                    </div>
+                </div>
+
+                <!-- Institute -->
+                <div>
+                    <p class="px-3 text-xs font-bold text-cobe-accent uppercase tracking-wider mb-2">Institute</p>
+                    <div class="space-y-1">
+                        <a href="cocp.html" class="block px-3 py-2 rounded-md text-base font-bold text-cobe-black bg-gray-50">COCP Qualification</a>
+                        <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">About the Institute</a>
+                        <a href="cobe-community.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">The COBE Community</a>
+                        <a href="corporate-exodus.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Corporate Exodus</a>
+                        <a href="ethics.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Governance & Ethics</a>
+                        <a href="partner.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Partner With Us</a>
+                    </div>
+                </div>
+
+                <!-- Media -->
+                <div>
+                    <p class="px-3 text-xs font-bold text-cobe-accent uppercase tracking-wider mb-2">Media & Insights</p>
+                    <div class="space-y-1">
+                        <a href="media.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Press & Media</a>
+                        <a href="speaking.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Corporate Speaking</a>
+                        <a href="https://blog.costofblackexcellence.com" target="_blank" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">The COBE Blog <i data-lucide="external-link" class="w-3 h-3 inline"></i></a>
+                    </div>
+                </div>
+
+                <!-- Mobile CTAs -->
                 <div class="pt-4 border-t border-gray-100 flex flex-col gap-3">
-                    <a href="contact.html" class="block w-full text-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-cobe-black bg-cobe-accent hover:bg-white shadow-md">Contact Us</a>
+                    <a href="contact.html" class="block w-full text-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-cobe-black hover:bg-cobe-dark">Contact Us</a>
                 </div>
             </div>
         </div>
@@ -453,10 +541,10 @@
                     </p>
                     <div class="flex space-x-4">
                         <a href="https://www.linkedin.com/in/nw-cobe/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-cobe-accent hover:text-cobe-black transition-all" aria-label="LinkedIn">
-                            <i data-lucide="linkedin" class="h-5 w-5"></i>
+                            <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                         </a>
                         <a href="https://www.youtube.com/@NatashaWilliamsUK" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-cobe-accent hover:text-cobe-black transition-all" aria-label="YouTube">
-                            <i data-lucide="youtube" class="h-5 w-5"></i>
+                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z" clip-rule="evenodd"/></svg>
                         </a>
                         <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-cobe-accent hover:text-cobe-black transition-all group relative" aria-label="Podcast">
                             <i data-lucide="mic" class="h-5 w-5"></i>
@@ -488,6 +576,7 @@
                     <ul class="space-y-3">
                         <li><a href="media.html" class="text-gray-400 hover:text-cobe-accent text-sm transition-colors">Press & Media</a></li>
                         <li><a href="speaking.html" class="text-gray-400 hover:text-cobe-accent text-sm transition-colors">Corporate Speaking</a></li>
+                        <li><a href="https://blog.costofblackexcellence.com" target="_blank" class="text-gray-400 hover:text-cobe-accent text-sm transition-colors flex items-center gap-1">The COBE Blog <i data-lucide="external-link" class="w-3 h-3"></i></a></li>
                     </ul>
                 </div>
 
@@ -496,7 +585,7 @@
                     <h3 class="font-bold text-white tracking-wider uppercase text-sm mb-4">The Audit Platform</h3>
                     <ul class="space-y-3 mb-8">
                         <li><a href="audits.html" class="text-gray-400 hover:text-cobe-accent text-sm transition-colors">Organisational Diagnostics</a></li>
-                        <li><a href="quiz.html" class="text-gray-400 hover:text-cobe-accent text-sm transition-colors">The Assessment</a></li>
+                        <li><a href="https://score.costofblackexcellence.com" target="_blank" class="text-gray-400 hover:text-cobe-accent text-sm transition-colors flex items-center gap-1">The Assessment <i data-lucide="external-link" class="w-3 h-3"></i></a></li>
                     </ul>
 
                     <h3 class="font-bold text-white tracking-wider uppercase text-sm mb-4">Stay Updated</h3>
